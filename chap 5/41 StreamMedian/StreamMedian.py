@@ -1,0 +1,4 @@
+
+
+def StreamMedian(array):
+    pass
