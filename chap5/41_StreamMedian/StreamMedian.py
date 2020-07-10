@@ -1,7 +1,7 @@
 import random
 
 ################大根堆模块：建立大根堆、调整大根堆################
-#建立大根堆
+#建立大根堆,本质上是向上调整
 def bigHeapInsert(array,index):
     parentIndex=(index-1)//2       #父节点的下标索引
     while parentIndex>=0 and array[parentIndex]<array[index]:
@@ -9,16 +9,16 @@ def bigHeapInsert(array,index):
         index=parentIndex          #交换后，更新节点信息
         parentIndex = (index - 1) // 2
 
-#调整大根堆
-def bigHeapeapIfy(array,index):
+#调整大根堆,本质上是向下调整
+def bigHeapIfy(array,index):
     leftSonIndex=2*index+1                          #左右儿子节点的下标索引
     rightSonIndex=2*index+2
     while leftSonIndex<=len(array)-1:               #大跟堆向下调整的前提是该节点至少存在左儿子节点
-        if rightSonIndex>len(array)-1:              #该节点只存在左儿子节点
+        if rightSonIndex>len(array)-1:              #该节点只存在左儿子节点，不存在右儿子节点
             if array[leftSonIndex]>array[index]:    #若左儿子节点数值比该节点数值大，就进行交换
                 array[index],array[leftSonIndex]=array[leftSonIndex],array[index]
             break                                   #无论是否进行数值交换，都在该轮后跳出循环
-        else:                                            #该节点同时存在左右儿子节点
+        else:                                       #该节点同时存在左右儿子节点
             if array[leftSonIndex]>=array[rightSonIndex]:#找出左右儿子节点所对应数值的较大值
                 bigIndex=leftSonIndex
             else:
@@ -32,7 +32,7 @@ def bigHeapeapIfy(array,index):
                 break
 
 ################小根堆模块：建立小根堆、调整小根堆################
-#建立小跟堆
+#建立小跟堆，本质是向上调整
 def smallHeapInsert(array,index):
     parentIndex=(index-1)//2             #父节点的下标索引
     while parentIndex>=0 and array[index]<array[parentIndex]:
@@ -40,16 +40,16 @@ def smallHeapInsert(array,index):
         index=parentIndex                #交换后，更新节点信息
         parentIndex = (index - 1) // 2
 
-#调整小根堆
-def smallHeapeapIfy(array,index):
+#调整小根堆，本质是向下调整
+def smallHeapIfy(array,index):
     leftSonIndex=2*index+1                          #左右儿子节点的下标索引
     rightSonIndex=2*index+2
     while leftSonIndex<=len(array)-1:               #小跟堆向下调整的前提是该节点至少存在左儿子节点
-        if rightSonIndex>len(array)-1:              #该节点只存在左儿子节点
+        if rightSonIndex>len(array)-1:              #该节点只存在左儿子节点，不存在右儿子节点
             if array[leftSonIndex]<array[index]:    #若左儿子节点数值比该节点数值小，就进行交换
                 array[index],array[leftSonIndex]=array[leftSonIndex],array[index]
             break                                   #无论是否进行数值交换，都在该轮后跳出循环
-        else:                                            #该节点同时存在左右儿子节点
+        else:                                       #该节点同时存在左右儿子节点
             if array[leftSonIndex]<=array[rightSonIndex]:#找出左右儿子节点所对应数值的较小值
                 smallIndex=leftSonIndex
             else:
@@ -86,12 +86,12 @@ def StreamMedian(array):
             bigHeap[len(bigHeap)-1],bigHeap[0]=bigHeap[0],bigHeap[len(bigHeap)-1]
             smallHeap.append(bigHeap.pop())             #再将大根堆的尾节点移到小根堆上
             smallHeapInsert(smallHeap,len(smallHeap)-1) #分别对大、小根堆进行堆调整
-            bigHeapeapIfy(bigHeap,0)
+            bigHeapIfy(bigHeap,0)
         elif len(bigHeap)+2<=len(smallHeap):            #小根堆的长度比大根堆的长度长2以上
             # 小根堆的头结点和尾节点先进行交换
             smallHeap[len(smallHeap) - 1], smallHeap[0] = smallHeap[0], smallHeap[len(smallHeap) - 1]
-            bigHeap.append(smallHeap.pop())             #再将小根堆的尾节点移到大根堆上
-            smallHeapeapIfy(smallHeap, 0)               #对大、小根堆进行堆调整
+            bigHeap.append(smallHeap.pop())          #再将小根堆的尾节点移到大根堆上
+            smallHeapIfy(smallHeap, 0)               #对大、小根堆进行堆调整
             bigHeapInsert(bigHeap, len(bigHeap) - 1)
 
     #如果数据流中读出奇数个数值，那么中位数就是所有数值排序之后的位于中间的数值
@@ -122,13 +122,14 @@ if __name__=="__main__":
     for i in range(10000):
         length = 500                       # 随机数列表的长度
         array = randomList(length)         # 生成随机数列表
+        sortArray=sorted(array)            # 调用库函数对原数组进行升序排序
 
         # 如果数据流中读出奇数个数值，那么中位数就是所有数值排序之后的位于中间的数值
         # 如果数据流中读出偶数个数值，那么中位数就是所有数值排序之后的中间两个数的平均值
-        if len(array)%2==0:
-            right=(array[len(array)//2]+array[len(array)//2-1])/2
+        if len(sortArray)%2==0:
+            right=(sortArray[len(sortArray)//2]+sortArray[len(sortArray)//2-1])/2
         else:
-            right=array[len(array)//2]
+            right=sortArray[len(sortArray)//2]
         test=StreamMedian(array)
         if right == test:
             print("第%d次测试：测试准确" % (i))
