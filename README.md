@@ -13,3 +13,6 @@
 面试题40：[最小的k个数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/40_GetLeastNumbers)
 
 面试题41：[数据流的中位数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/41_StreamMedian)
+
+面试题42：[连续子数组的最大和](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/42_GreatestSumOfSubarrays)
+
