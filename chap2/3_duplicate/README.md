@@ -18,6 +18,8 @@
 
 先把输入的数组间排序。从排序额数组中国找出重复的数值是一件容易的事情，只需要从头到尾扫描排序后的数值即可。
 
+
+
 **思路二：哈希表**
 
 时间复杂度：O(N)
@@ -28,5 +30,18 @@
 
 这个算法的时间复杂度是O(N)，但它提高时间效率是以一个大小为O(N)的哈希表为代价。
 
-
+```
+#函数功能：找出数组中重复的数字
+#思路二：基于哈希表
+#算法复杂度:O(N)
+def duplicate(array):
+    if array==None or len(array)<=0:    #判断数组是否为空数组
+        return None
+    hashMap={}                          #用来记录数组中元素是否是重复元素
+    for index in range(len(array)):
+        if array[index] not in hashMap: #若字典中没存在该元素，则将该元素添加到字典中
+            hashMap[array[index]]=1
+        else:                           #若字典中已经存在该元素，则直接返回
+            return array[index]
+```
 
