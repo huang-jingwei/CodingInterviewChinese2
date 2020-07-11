@@ -26,6 +26,27 @@
 
 
 
+```
+#函数功能：斐波那契数列,输出数列的第k项
+#算法复杂度:O(N)
+
+def Fibonacci(k):
+    if k<0:            #k为非负整数，当输入的k为负数时，直接输出false
+        return False
+    if k==0:           #当k=0、1时，直接输出对应数值
+        return 0
+    elif k==1:
+        return 1
+    else:              #当k>1时，采用数组形式来记录斐波那契数列数值
+        array=[0]*(k+1)
+        array[1]=1
+        for index in range(2,len(array)):
+            array[index]=array[index-1]+array[index-2]
+        return array[k]
+```
+
+
+
 **题目二：青蛙台阶问题**
 
 【题目】一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
@@ -49,3 +70,28 @@
 递归方法实现：算法复杂度O（2^N）
 
 循环方法实现：算法复杂度O（N）
+
+
+
+```
+#函数功能：斐波那契数列,输出数列的第k项
+#算法复杂度:O(N)
+
+def Fibonacci(k):
+    if k<0:            #k为非负整数，当输入的k为负数时，直接输出false
+        return False
+    if k==0:           #当k=0、1、2时，直接输出对应数值
+        return 0
+    elif k==1:
+        return 1
+    elif k==2:
+        return 2
+    else:              #当k>1时，采用数组形式来记录斐波那契数列数值
+        array=[0]*(k+1)
+        array[1]=1
+        array[2]=2
+        for index in range(2,len(array)):
+            array[index]=array[index-1]+array[index-2]
+        return array[k]
+```
+
