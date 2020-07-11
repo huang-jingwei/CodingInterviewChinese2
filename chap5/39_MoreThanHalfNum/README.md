@@ -18,3 +18,27 @@
 
 数组中有一个一个数字出现的次数超过了数组长度的一半。如果将这个数组进行排序，那么排序之后位于数组之间的数字一点是那个出现次数超过数组长度一半的数字。也就是说，这个数字是统计学上的中位数，即长度为n的数组中第n/2大的数字
 
+
+
+```
+#函数功能：找出数组中出现次数超过一半的数字
+#解题思路：将该问题转化成求解数组中位数的问题
+#算法复杂度:O(N)
+
+def MoreThanHalfNum(array):
+    if array==None or len(array)==0:              #判断数组是否为空数组
+        return None
+    left=0                                        #数组array操作区间左边界下标
+    right=len(array)-1                            #数组array操作区间右边界下标
+    mid=(right+left)//2                           #数组array中位数的下标
+    indexRange=partition(array, left, right)      #对整个数组array进行partition过程
+    while mid<indexRange[0] or mid>indexRange[1]: #所得区间不能包含中位数下标时，调用递归函数
+        if mid<indexRange[0]:                     #中位数下标比所得区间左边界下标还小时，对区间数组左侧再进行partition过程
+            right=indexRange[0]
+            indexRange = partition(array, left, right)
+        elif mid > indexRange[1]:                 #中位数下标比所得区间右边界下标还大时，对区间数组右侧再进行partition过程
+            left = indexRange[1]
+            indexRange = partition(array, left, right)
+    return array[mid]
+```
+
