@@ -10,6 +10,10 @@
 
 
 
+牛客网OJ:[数据流的中位数](https://www.nowcoder.com/practice/9be0172896bd43948f8a32fb954e1be1?tpId=13&tqId=11216&rp=4)
+
+
+
 **思路一：（一般用来处理静态数据，也就是数据本身不变化）**
 
 1. 先对数组进行快速排序，算符复杂度为O(N*log N)
