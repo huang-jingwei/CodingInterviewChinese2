@@ -2,6 +2,12 @@
 
 在代码文件中，也进包含有测试模块代码。
 
+# 第2章 ：[面试所需的基础知识](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2)
+
+**2.3：数据结构**
+
+面试题3：[数组中重复出现的数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/3_duplicate)
+
 
 
 # 第5章 ：[优化时间和空间效率](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5)
