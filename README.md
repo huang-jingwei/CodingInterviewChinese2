@@ -8,6 +8,8 @@
 
 面试题3：[数组中重复出现的数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/3_duplicate)
 
+面试题4：[二维数组中的查找](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/4_FindInPartiallySortedMatrix)
+
 
 
 # 第5章 ：[优化时间和空间效率](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5)
