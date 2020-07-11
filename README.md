@@ -30,3 +30,5 @@
 
 面试题43：[1到n整数中1出现的次数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/43_NumberOf1)
 
+面试题49：[丑数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/49_UglyNumber)
+
