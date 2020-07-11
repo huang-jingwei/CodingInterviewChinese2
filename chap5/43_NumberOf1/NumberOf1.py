@@ -1,61 +1,57 @@
 import random
 
 
-#函数功能：找到数组的连续子数组最大和
+#函数功能：1到n整数中1出现的次数
 
 # 基于思想：对于一个数A，若是A的左边累计数非负，那么加上A能使得值不小于A，认为累计值对整体和是有贡献的。
 # 如果前几项累计值负数，则认为有害于总和，total记录当前值。
 # 此时 若和大于maxSum 则用maxSum记录下来。最后返回maxSum。
 #算法时间复杂度O（n）
-def GetLeastNumbers(array):
-    if array==None or len(array)<=0: #对数组进行判空操作
-        return None
-    elif len(array)==1:                  #数组只有一个元素时，直接返回该元素数值
-        return array[0]
-    total =array[0]                      #初始化当前子数组总和数值
-    maxSum=array[0]                      #初始化连续子数组最大和
-    for index in range(1,len(array)):    #遍历数组
-        if total>=0:
-            total=total+array[index]
-        else:
-            total=array[index]
-        if total>=maxSum:
-            maxSum=total
-    return maxSum
+def NumberOf1(n):
+    pass
+
+
+
+
 ######################下面代码是测试模块代码##################################
 
-#生成指定长度的随机数列表
-#参数说明:length:列表长度，low，high：分别为随机数列表数值的范围
-def randomList(length,low=-20,high=100):
-    array=[]
-    for i in range(length):
-        array.append(random.randint(low,high))
-    return array
-
-#函数功能：
-#基本思路：采用遍历数组的方式
-#算法复杂度：O(N)
-def NumberOf1_right(array):
-    if array==None or len(array)==0:
+#函数功能：1到n整数中1出现的次数
+#基本思路：采用遍历的方式,找出在区间范围内元素中数字1出现的总个数
+#算法复杂度：O(N *logN)
+def NumberOf1_right(n):
+    if n==None or n==0:                    #判断输入是否为空
         return 0
-    count=0
-    for index in range(len(array)):
-        if array[index]==1:
-            count=count+1
+    count=0                                #计数器，用来记录数字1出现的总次数
+    for number in range(n):
+        count=count+NumberTimesOf1(number) #记录数组每个元素中数字1出现的总次数
     return count
+
+#函数功能：计算数字number中数字1出现的总次数
+#算法复杂度：O(logN)
+def NumberTimesOf1(number):
+    if number==None:                  #输入为空时，直接返回0
+        return 0
+    times=0                            #记录数字number中数字1出现的次数
+    index=0                            #十进制的位数
+    while 10**index<=number:
+        item=int(10/(10**index))%10    #获得数字在十进制下的每个位置的数字
+        if item==1:                    #若该位置上数字为1，计算器加1
+            times=times+1
+        index=index+1
+    return times
 
 if __name__=="__main__":
 
-    # 采用对数器方法进行对所写代码进行验证,找出连续子数组的最大和
+    # 采用对数器方法进行对所写代码进行验证,找出1到n整数中1出现的次数
     errorCount = 0  # 记录测试过程中算法求解错误的次数
     for i in range(10000):
-        length = 500                       # 随机数列表的长度
-        array = randomList(length)         # 生成随机数列表
-        right=NumberOf1_right(array)       # 对数器模块代码，用来做对比组
-        test=GetLeastNumbers(array)        # 自己编写的代码模块，需要测试的代码模块
+        number = random.randint(0,500)      # 在0~500范围内，随机生成一个整数
+        right=NumberOf1_right(number)       # 对数器模块代码，用来做对比组
+        test=NumberOf1(number)              # 自己编写的代码模块，需要测试的代码模块
         if right == test:
             print("第%d次测试：测试准确" % (i))
         else:
             print("第%d次测试：测试错误" % (i))
             errorCount = errorCount + 1
     print("测试过程中算法求解错误的次数%d" % (errorCount))
+
