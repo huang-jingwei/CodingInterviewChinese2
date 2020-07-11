@@ -10,6 +10,8 @@
 
 面试题4：[二维数组中的查找](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/4_FindInPartiallySortedMatrix)
 
+面试题10：[斐波那契数列](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/10_Fibonacci)
+
 
 
 # 第5章 ：[优化时间和空间效率](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5)
