@@ -6,6 +6,10 @@
 
 这道题目在左神初级班上也讲过，这里我就直接贴上我之前看视频做的笔记。
 
+牛客网OJ:[二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&tqId=11154&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+
+
 【题目】 给定一个有N*M的整型矩阵matrix和一个整数K，matrix的每一行和每一 列都是排好序的。 实现一个函数， 判断K是否在matrix中。
 
  例如： 0 1 2 5 2 3 4 7 44 4 8 5 7 7 9
