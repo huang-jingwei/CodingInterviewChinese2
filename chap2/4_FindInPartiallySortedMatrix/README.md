@@ -47,3 +47,25 @@
 
 从矩阵右上角的点开始取点与该数比较，如果大于该数，那么说明这个点所在的列都不存在该数，将这个点左移；如果这个点上的数小于该数，那么说明这个点所在的行不存在该数，将这个点下移。直到找到与该数相等的点为止。最坏的情况是，该数只有一个且在矩阵左下角上，那么时间复杂度为O(M-1+N-1)=O(M+N)
 
+
+
+```
+#函数功能：判断二维数组中是否含有该整数k
+#解题思路：将该问题转化成求解数组中位数的问题
+#算法复杂度:O(N+M)
+
+def FindInPartiallySortedMatrix(array,k):
+    if array.shape[0]==0 or array.shape[1]==0: #判断数组是否为空数组
+        return None
+    rowIndex=0                           #初始化移动下标,从数组的右上角开始寻找
+    colIndex=array.shape[1]-1
+    while rowIndex<=array.shape[0]-1 and colIndex>=0:
+        if array[rowIndex,colIndex]==k:  #当前元素数值等于整数k
+            return True
+        elif array[rowIndex,colIndex]>k: #当前元素数较大时，该矩阵为递增矩阵，列位置减1，移动到较小的元素
+            colIndex=colIndex-1
+        elif array[rowIndex,colIndex]<k: #当前元素数较小时，该矩阵为递增矩阵，行位置加1，移动到较大的元素
+            rowIndex=rowIndex+1
+    return False
+```
+
