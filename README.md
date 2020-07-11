@@ -12,6 +12,8 @@
 
 面试题10：[斐波那契数列](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/10_Fibonacci)
 
+面试题11：[旋转数组的最小数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/11_MinNumberInRotatedArray)
+
 
 
 # 第5章 ：[优化时间和空间效率](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5)
