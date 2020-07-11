@@ -4,15 +4,7 @@
 
 【题目】把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个非递减序列的一个旋转，输出旋转数组的最小元素。
 
-牛客网OJ：[斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg)
 
-
-
-递推公式f(n) =​
-
-- f(n)=0, 当n=0​时
-- f(n)=1, 当n=1时
-- f(n)=f(n - 1) + f(n - 2), 其他情形
 
 【例如】数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。
 
