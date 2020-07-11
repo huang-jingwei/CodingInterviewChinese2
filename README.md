@@ -28,3 +28,4 @@
 
 面试题42：[连续子数组的最大和](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/42_GreatestSumOfSubarrays)
 
+面试题43：1到n整数中1出现的次数
