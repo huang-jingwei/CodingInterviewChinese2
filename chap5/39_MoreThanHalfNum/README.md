@@ -20,7 +20,7 @@
 
 
 
-```
+```python
 #函数功能：找出数组中出现次数超过一半的数字
 #解题思路：将该问题转化成求解数组中位数的问题
 #算法复杂度:O(N)
@@ -40,5 +40,28 @@ def MoreThanHalfNum(array):
             left = indexRange[1]
             indexRange = partition(array, left, right)
     return array[mid]
+
+#荷兰国旗问题
+#函数功能：任选数组一个值num，要求把数组中小于num的元素放到数组的左边，大于num的元素放到数组的右边，等于num的元素放到数组的中间
+# 最终返回一个整数数组，其中只有两个值，分别是等于num的数组部分的左右两个下标值。
+#参数说明：array：给定的数组，left：数组操作区间的左边界下标，right：数组操作区间的的右边界下标
+
+def partition(array,left,right):
+    num=array[random.randint(left,right)]  #在数组操作区域区间内任选一个数
+    index=left                             #移动下标
+    less=left-1                            #array数组中，下标≤less的区域存放小于num的数
+    more=right+1                           #array数组中，下标≥more的区域存放大于num的数
+    while index<more:
+        if array[index]==num:
+            index=index+1
+        elif array[index]<num:
+            less=less+1
+            array[index],array[less]=array[less],array[index]
+            index=index+1
+        elif array[index]>num:
+            more=more-1
+            array[index],array[more]=array[more],array[index]
+    indexRange=[less+1,more-1]             #等于num的数组部分的左右两个下标值
+    return indexRange
 ```
 
