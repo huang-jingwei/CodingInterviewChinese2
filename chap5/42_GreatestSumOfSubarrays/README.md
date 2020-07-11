@@ -6,6 +6,10 @@
 
 
 
+牛客网OJ：[连续子数组的最大和](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=13&tqId=11183&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
+
+
+
 **思路一：暴力解法，穷举所有可能的子数组**
 
 基本思想：可以将给定数组的的所有子数组列出来，然后找到子数组和做大的情况，具体来说就是： 对数组内每一个数A[i]进行遍历，然后遍历以它们为起点的子数组，比较各个子数组的大小，找到最大连续子数组；
