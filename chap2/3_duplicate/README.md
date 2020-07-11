@@ -8,6 +8,10 @@
 
 
 
+牛客网OJ：[数组中重复的数字](https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8?tpId=13&tqId=11203&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
+
+
+
 **思路一：对数组进行排序**
 
 时间复杂度：O(N*log N)
