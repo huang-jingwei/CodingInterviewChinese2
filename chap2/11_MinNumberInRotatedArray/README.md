@@ -26,7 +26,20 @@
 
 算法时间复杂度：O（N）
 
+```python
+#函数功能：找出旋转数组的最小数字
+#思路一 解题思路：遍历数组,找出数组的最小值
+#算法复杂度:O(N)
 
+def MinNumberInRotatedArray_way1(array):
+    if array==None or len(array)==0:   #判断数组是否为空数组
+        return None
+    minValue=array[0]                  #初始化数组的最小值
+    for index in range(1,len(array)):
+        if array[index]<minValue:
+            minValue=array[index]
+    return minValue
+```
 
 
 
@@ -55,7 +68,7 @@
 
 
 
-  
+
 
 
 
