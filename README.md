@@ -1,6 +1,6 @@
 # 《剑指offer》第二版 Python语言实现
 
-在代码文件中，也进包含有测试模块代码。
+《剑指offer》第二版的Python语言实现。也记录了自己的解题思路，并且每道题目都附有对应的LeetCode链接,方便对代码进行测试。
 
 # 第2章 ：[面试所需的基础知识](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2)
 
