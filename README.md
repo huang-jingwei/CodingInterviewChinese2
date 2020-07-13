@@ -68,7 +68,7 @@
 
 面试题26：数的子结构
 
-# 第4章：解决面试题的思路
+# 第4章：[解决面试题的思路](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4)
 
 ## 4.2：画图让抽象问题具体化
 
@@ -128,7 +128,7 @@
 
 
 
-# 第6章：面试中的各项能力
+# 第6章：[面试中的各项能力](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6)
 
 ## 6.3：知识迁移能力
 
