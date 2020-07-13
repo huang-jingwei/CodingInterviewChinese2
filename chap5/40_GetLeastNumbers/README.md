@@ -8,7 +8,7 @@
 
 
 
-牛客网OJ：[最小的K个数](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf?tpId=13&tqId=11182&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
+LeetCode：[最小的K个数](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)
 
 
 
