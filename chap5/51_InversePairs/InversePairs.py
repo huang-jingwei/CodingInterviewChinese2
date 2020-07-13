@@ -2,8 +2,7 @@ import random
 
 
 #函数功能：找到数组中的逆序对个数
-#基本思路：采用哈希表来存放字符出现的次数
-# 算法时间复杂度：O(N)
+#基本思路：还未完全实现
 def InversePairs(array):
     if array == None or len(array) == 0:  # 判断输入是否为空
         return 0

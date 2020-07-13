@@ -36,30 +36,6 @@ def InversePairs_right(array):
 
 
 
-**思路二：哈希表**
-
-采用哈希表来记录字符串中每个字符出现的次数。
-
-算法时间复杂度：O(N)
-
-```python
-#函数功能：照到字符串中第一个只出现一次的字符
-#基本思路：采用哈希表来存放字符出现的次数
-def UglyNumber(string):
-    if string== None:            # 判断输入是否为空
-        return False
-    data={}                      # 初始化一个哈希表
-    for i in string:             # 遍历字符串
-        if i not in data:        #若哈希表中未出现过该元素，则字符对应的出现次数初始化为1
-            data[i]=1
-        else:
-            data[i]=data[i]+1   # 反之，出现次数加一
-    for i in string:            # 遍历字符串，在哈希表中搜索对应的字符出现的次数
-        if data[i]==1:          # 若字符出现的次数为1，直接返回
-            return i
-    return False
-```
-
 
 
 
