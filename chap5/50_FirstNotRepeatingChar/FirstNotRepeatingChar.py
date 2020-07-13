@@ -9,7 +9,7 @@ def FirstNotRepeatingChar(string):
         return False
     data={}                      # 初始化一个哈希表
     for i in string:             # 遍历字符串
-        if i not in data:        #若哈希表中未出现过该元素，则字符对应的出现次数初始化为1
+        if i not in data:        # 若哈希表中未出现过该元素，则字符对应的出现次数初始化为1
             data[i]=1
         else:
             data[i]=data[i]+1   # 反之，出现次数加一
@@ -30,8 +30,8 @@ def FirstNotRepeatingChar_right(string):
         count=True                          # 布尔记录器，用来记录字符串中是否存在与改字符相同的字符
         for j in range(i+1,len(string)):
             if string[i]==string[j]:
-                count=False                 #字符串中存在与改字符相同的字符
-        if count==True:                     #若字符串中不存在与改字符相同的字符，直接返回
+                count=False                 # 字符串中存在与改字符相同的字符
+        if count==True:                     # 若字符串中不存在与改字符相同的字符，直接返回
             return string[i]
     return False
 
