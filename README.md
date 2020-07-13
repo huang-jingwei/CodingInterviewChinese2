@@ -36,5 +36,7 @@
 
 面试题50：[第一个只出现一次的字符](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/50_FirstNotRepeatingChar)
 
-面试题51：数组中的逆序对
+面试题51：[数组中的逆序对](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/51_InversePairs)
+
+面试题52：两个链表的第一个公共节点、
 
