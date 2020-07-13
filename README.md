@@ -16,6 +16,22 @@
 
 
 
+# 第3章：高质量的代码
+
+## 3.3代码的完整性
+
+面试题16：数值的n次方
+
+面试题17：打印从1到最大的n位数
+
+## 3.4代码的鲁棒性
+
+
+
+
+
+
+
 # 第5章 ：[优化时间和空间效率](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5)
 
 ## 5.2：时间效率
