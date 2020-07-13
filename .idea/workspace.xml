@@ -105,7 +105,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.InversePairs">
+  <component name="RunManager" selected="Python.StreamMedian">
     <configuration name="FirstNotRepeatingChar" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CodingInterviewChinese2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,27 +148,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="GetLeastNumbers" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CodingInterviewChinese2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GetLeastNumbers.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="InversePairs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CodingInterviewChinese2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,6 +161,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap5/51_InversePairs/InversePairs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="StreamMedian" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CodingInterviewChinese2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap5/41_StreamMedian" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap5/41_StreamMedian/StreamMedian.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -213,11 +213,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.StreamMedian" />
         <item itemvalue="Python.InversePairs" />
         <item itemvalue="Python.model Test" />
         <item itemvalue="Python.FirstNotRepeatingChar" />
         <item itemvalue="Python.GetLeastNumbers (1)" />
-        <item itemvalue="Python.GetLeastNumbers" />
       </list>
     </recent_temporary>
   </component>
