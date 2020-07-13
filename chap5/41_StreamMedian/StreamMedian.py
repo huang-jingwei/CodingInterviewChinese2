@@ -62,7 +62,7 @@ def smallHeapIfy(array,index):
             else:                                    #若该节点数值比儿子节点的较小值还小，则不需要进行交换，直接跳出循环
                 break
 
-
+ 
 #函数功能：找到数据流的中位数
 def StreamMedian(array):
     bigHeap=[]                           #初始化一个大根堆和小根堆

@@ -3,33 +3,21 @@ import random
 
 #函数功能：找到数组中的逆序对个数
 #基本思路：还未完全实现
-def InversePairs(array):
-    if array == None or len(array) == 0:  # 判断输入是否为空
+def Power(base,exponent):
+    if exponent==0:            # 若是零次方，直接返回1
         return 0
     pass
 
 ######################下面代码是测试模块代码##################################
 
-#生成指定长度的随机数列表
-#参数说明:length:列表长度，low，high：分别为随机数列表数值的范围
-def randomList(length,low=0,high=100):
-    array=[]
-    for i in range(length):
-        array.append(random.randint(low,high))
-    return array
-
-# 函数功能：找到数组中的逆序对个数
-# 基本思路：暴力搜索
-# 每扫描到一个数字，逐个比较该数字和它后面的数字的大小。如果后面的数字比他小，则两个数字组成一个逆序对
-# 算法时间复杂度：O(N^2)
-def InversePairs_right(array):
-    if array== None or len(array)==0:       # 判断输入是否为空
+# 函数功能：求数值的整数次方
+# 基本思路：暴力解法,直接求base的exponent次方
+def Power_right(base,exponent):
+    if exponent==0:            # 若是零次方，直接返回1
         return 0
-    count = 0                               # 初始化计数器，用来记录逆序对的总个数
-    for i in range(len(array)):             # 遍历数组
-        for j in range(i+1,len(array)):
-            if array[i]>array[j]:           # 找到逆序对，计数器加一
-                count=count+1
+    count = 1                  # 初始化计数器，用来记录数值的整数次方
+    for i in range(exponent):
+        count=count*base
     return count
 
 
@@ -39,9 +27,10 @@ if __name__=="__main__":
     errorCount = 0  # 记录测试过程中算法求解错误的次数
     for i in range(10000):
         length = 500                       # 随机数列表的长度
-        array = randomList(length)         # 生成随机数列表
-        right =InversePairs_right(array)   # 对照组实验，思路一
-        test = InversePairs(array)         # 改进后算法，思路二
+        base = random.randint(-200,500)    # 生成两个随机数
+        exponent=random.randint(0,100)
+        right =Power_right(base,exponent)  # 对照组实验，思路一:暴力解法
+        test = Power(base,exponent)        # 改进后算法，思路二
         if right == test:
             print("第%d次测试：测试准确" % (i))
         else:
