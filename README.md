@@ -34,3 +34,7 @@
 
 面试题49：[丑数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/49_UglyNumber)
 
+面试题50：[第一个只出现一次的字符](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/50_FirstNotRepeatingChar)
+
+面试题51：数组中的逆序对
+
