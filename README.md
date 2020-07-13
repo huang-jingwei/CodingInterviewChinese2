@@ -22,11 +22,13 @@
 
 面试题16：[数值的n次方](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/16_Power)
 
-面试题17：打印从1到最大的n位数
+面试题17：[打印从1到最大的n位数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/17_PrintToMaxOfNDigits)
+
+面试题18：[删除链表的节点](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/18_DeleteNodeInList)
 
 ## 3.4代码的鲁棒性
 
-面试题21：调整数组顺序使奇数位于偶数的前面
+面试题21：[调整数组顺序使奇数位于偶数的前面](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/21_ReorderArray)
 
 
 
