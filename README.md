@@ -30,6 +30,8 @@
 
 面试题43：[1到n整数中1出现的次数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/43_NumberOf1)
 
+面试题47：[礼物的最大价值](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/47_MaxValueOfGifts)
+
 ## 5.3：时间效率与空间效率的平衡
 
 面试题49：[丑数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/49_UglyNumber)
@@ -44,7 +46,7 @@
 
 注：以下题目序号所对应的面试题均是还未完全实现的题目
 
-51
+47 51
 
 
 
