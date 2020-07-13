@@ -38,5 +38,7 @@
 
 面试题51：[数组中的逆序对](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/51_InversePairs)
 
-面试题52：两个链表的第一个公共节点、
+面试题52：两个链表的第一个公共节点
+
+
 
