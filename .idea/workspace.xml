@@ -125,7 +125,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ReorderArray">
+  <component name="RunManager" selected="Python.Power">
     <configuration name="InversePairs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CodingInterviewChinese2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -233,9 +233,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Power" />
         <item itemvalue="Python.ReorderArray" />
         <item itemvalue="Python.StreamMedian" />
-        <item itemvalue="Python.Power" />
         <item itemvalue="Python.InversePairs" />
         <item itemvalue="Python.model Test" />
       </list>
