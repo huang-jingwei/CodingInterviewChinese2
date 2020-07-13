@@ -6,7 +6,7 @@
 
 这道题目在左神初级班上也讲过，这里我就直接贴上我之前看视频做的笔记。
 
-牛客网OJ:[二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&tqId=11154&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+LeetCode:[二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/)
 
 
 

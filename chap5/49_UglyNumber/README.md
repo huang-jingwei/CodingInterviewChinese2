@@ -6,7 +6,7 @@
 
 
 
-牛客网OJ：[丑数](https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b?tpId=13&tqId=11186&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
+LeetCode:[丑数](https://leetcode-cn.com/problems/chou-shu-lcof/)
 
 
 

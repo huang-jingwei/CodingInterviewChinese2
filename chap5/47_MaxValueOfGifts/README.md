@@ -14,7 +14,7 @@
 |  5   |  7   |  4   |  11  |
 |  3   |  7   |  16  |  5   |
 
-leetcode：[礼物的最大价值](https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/)
+LeetCode:[礼物的最大价值](https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/)
 
 
 

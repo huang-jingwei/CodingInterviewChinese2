@@ -4,7 +4,7 @@
 
 **题目一：求斐波那契数列的第n项**
 
-牛客网OJ：[斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg)
+LeetCode:[斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/)
 
 
 
@@ -13,10 +13,6 @@
 - f(n)=0, 当n=0​时
 - f(n)=1, 当n=1时
 - f(n)=f(n - 1) + f(n - 2), 其他情形
-
-
-
-牛客网OJ：[斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg)
 
 
 
