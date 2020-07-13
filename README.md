@@ -16,11 +16,11 @@
 
 
 
-# 第3章：高质量的代码
+# 第3章：[高质量的代码](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3)
 
 ## 3.3代码的完整性
 
-面试题16：数值的n次方
+面试题16：[数值的n次方](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/16_Power)
 
 面试题17：打印从1到最大的n位数
 
