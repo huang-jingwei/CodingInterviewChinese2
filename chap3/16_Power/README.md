@@ -18,8 +18,6 @@ LeetCode:[数值的整数次方](https://leetcode-cn.com/problems/shu-zhi-de-zhe
 
 
 
-
-
 **思路一：暴力解法**
 
 
@@ -28,21 +26,88 @@ LeetCode:[数值的整数次方](https://leetcode-cn.com/problems/shu-zhi-de-zhe
 # 函数功能：求数值的整数次方
 # 基本思路：暴力解法,直接求base的exponent次方
 def Power_right(base,exponent):
-    if exponent==0:            # 若是零次方，直接返回1
-        return 0
-    count = 1                  # 初始化计数器，用来记录数值的整数次方
-    for i in range(exponent):
-        count=count*base
-    return count
+    if exponent==0:          # 幂次为零时
+        if base!=0:          #若底数不为0，返回1，反之报错
+            return 1
+        else:
+            return False
+    elif exponent>0:        # 幂次为正数时
+        count = 1           # 初始化计数器，用来记录数值的整数次方
+        for i in range(exponent):
+            count = count * base
+        return count
+    elif exponent<0:       # 幂次为负数时
+        item=-exponent     # 先将指数取绝对值
+        count = 1          # 初始化计数器，用来记录数值的整数次方
+        for i in range(item):
+            count = count * base
+        if count==0:      # 再对所得数取倒数
+            return False
+        else:
 ```
 
+**思路二：采用递归方式对幂次运算进行简化**
 
 
 
 
 
+$$
+a^{n}=\left\{\begin{array}{l}
+a^{n / 2} \cdot a^{n / 2},&n为偶数 \\
+a^{(n-1) / 2} \cdot a^{(n-1) / 2} \cdot a,&n为奇数
+\end{array}\right.
+$$
+先假设底数非0且幂次都是非负数时，对数值进行幂次运算
 
+```python
+#假设底数非0且幂次都是非负数时，对数值进行幂次运算
+#基本思路：采用递归的方式对幂次进行简化
+def PowerUnsignedExponent(base,exponent):
+    if exponent==0:                                 # 幂次为0时，返回1
+        return 1
+    if exponent==1:                                 # 幂次为1时，返回底数
+        return base
+    result=PowerUnsignedExponent(base,exponent//2)  # 采用递归对幂次运算进行加速运算
+    result=result*result
+    if exponent%2==1:
+        result=result*base
+    return result
+```
 
+全部流程代码如下
 
+```python
+#函数功能：计算数值的整数次方
+#基本思路：对幂次运算进行优化
+def Power(base,exponent):
+    if exponent==0:                                   # 幂次为零时
+        if base!=0:                                   # 若底数不为0，返回1，反之报错
+            return 1
+        else:
+            return False
+    elif exponent>0:                                  # 幂次为正数时
+        result = PowerUnsignedExponent(base,exponent) # 调用函数计算数值的幂次
+        return result
+    elif exponent<0:                                 # 幂次为负数时
+        item=-exponent                               # 先将指数取绝对值
+        result = PowerUnsignedExponent(base,item)    #先调用函数计算数值的正数幂次
+        if result==0:                                # 再对所得数取倒数
+            return False
+        else:
+            return 1/result
 
+#假设底数非0且幂次都是非负数时，对数值进行幂次运算
+#基本思路：采用递归的方式对幂次进行简化
+def PowerUnsignedExponent(base,exponent):
+    if exponent==0:                                 # 幂次为0时，返回1
+        return 1
+    if exponent==1:                                 # 幂次为1时，返回底数
+        return base
+    result=PowerUnsignedExponent(base,exponent//2)  # 采用递归对幂次运算进行加速运算
+    result=result*result
+    if exponent%2==1:
+        result=result*base
+    return result
+```
 
