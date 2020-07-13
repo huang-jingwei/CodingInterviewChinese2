@@ -1,38 +1,37 @@
-# 面试题50：第一个只出现一次的字符
+# 面试题51：数组中的逆序对
 
 
 
-【题目一】 字符串中第一个只出现一次的字符。
+【题目】 在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。 输入一个数组，求出这个数组中的逆序对的总数
 
-例如：在字符串中找到第一个出现一次的字符。例如输入"abaccdeff"。则输出'b'
+例如：在数组{7,5,6,4}中，一共存在五个逆序对，分别是（7,6）、(7,5)、（7,4）、（6,4）和(5,4)
 
 
 
-牛客网OJ：[第一个只出现一次的字符](https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c?tpId=13&tqId=11187&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
+牛客网OJ：[数组中的逆序对](https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5?tpId=13&tqId=11188&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
 
 
 
 **思路一：暴力解法**
 
-最简单直接的方法就是对于每一个字符，循环判断后面的字符是不是跟它相同，直到查找到第一个只出现一次的那个字符即可
+最简单直接的方法就是每扫描到一个数字，逐个比较该数字和它后面的数字的大小。如果后面的数字比他小，则两个数字组成一个逆序对。
 
 算法时间复杂度：O(N^2)
 
 ```Python
-#函数功能：找到字符串中第一个只出现一次的字符
-#基本思路：暴力搜索
-# 对于每一个字符，循环判断后面的字符是不是跟它相同，直到查找到第一个只出现一次的那个字符即可
-def FirstNotRepeatingChar_right(string):
-    if string== None:                       # 判断输入是否为空
-        return False
-    for i in range(len(string)-1):          # 遍历字符串
-        count=True                          # 布尔记录器，用来记录字符串中是否存在与改字符相同的字符
-        for j in range(i+1,len(string)):
-            if string[i]==string[j]:
-                count=False                 #字符串中存在与改字符相同的字符
-        if count==True:                     #若字符串中不存在与改字符相同的字符，直接返回
-            return string[i]
-    return False
+# 函数功能：找到数组中的逆序对个数
+# 基本思路：暴力搜索
+# 每扫描到一个数字，逐个比较该数字和它后面的数字的大小。如果后面的数字比他小，则两个数字组成一个逆序对
+# 算法时间复杂度：O(N^2)
+def InversePairs_right(array):
+    if array== None or len(array)==0:       # 判断输入是否为空
+        return 0
+    count = 0                               # 初始化计数器，用来记录逆序对的总个数
+    for i in range(len(array)):             # 遍历数组
+        for j in range(i+1,len(array)):
+            if array[i]>array[j]:           # 找到逆序对，计数器加一
+                count=count+1              
+    return count
 ```
 
 

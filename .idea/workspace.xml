@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="405">
+              <caret line="15" selection-start-line="15" selection-end-line="21" selection-end-column="16" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -22,11 +22,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chap5/50_FirstNotRepeatingChar/FirstNotRepeatingChar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="549">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -34,17 +34,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chap5/41_StreamMedian/StreamMedian.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
+            <state relative-caret-position="135">
+              <caret line="118" selection-start-line="118" selection-end-line="138" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chap5/40_GetLeastNumbers/GetLeastNumbers.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chap5/51_InversePairs/InversePairs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1863">
-              <caret line="69" column="55" selection-start-line="63" selection-start-column="1" selection-end-line="69" selection-end-column="55" />
+            <state relative-caret-position="243">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -70,6 +70,7 @@
         <option value="$PROJECT_DIR$/StreamMedian.py" />
         <option value="$PROJECT_DIR$/chap5/41_StreamMedian/StreamMedian.py" />
         <option value="$PROJECT_DIR$/chap5/50_FirstNotRepeatingChar/FirstNotRepeatingChar.py" />
+        <option value="$PROJECT_DIR$/chap5/51_InversePairs/InversePairs.py" />
       </list>
     </option>
   </component>
@@ -104,7 +105,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.model Test">
+  <component name="RunManager" selected="Python.InversePairs">
     <configuration name="FirstNotRepeatingChar" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CodingInterviewChinese2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -212,8 +213,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.model Test" />
         <item itemvalue="Python.InversePairs" />
+        <item itemvalue="Python.model Test" />
         <item itemvalue="Python.FirstNotRepeatingChar" />
         <item itemvalue="Python.GetLeastNumbers (1)" />
         <item itemvalue="Python.GetLeastNumbers" />
@@ -243,7 +244,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -270,17 +271,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chap5/41_StreamMedian/StreamMedian.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="405">
+          <caret line="15" selection-start-line="15" selection-end-line="21" selection-end-column="16" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -289,8 +283,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chap5/50_FirstNotRepeatingChar/FirstNotRepeatingChar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="549">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chap5/41_StreamMedian/StreamMedian.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="118" selection-start-line="118" selection-end-line="138" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chap5/51_InversePairs/InversePairs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
