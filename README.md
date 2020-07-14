@@ -140,7 +140,7 @@
 
 面试题56：数组中数字出现的次数
 
-面试题57：和为s的数字
+面试题57：[和为s的数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/57_TwoNumbersWithSum)
 
 面试题58：翻转字符串
 
@@ -158,7 +158,7 @@
 
 ## 6.5：发散思维
 
-面试题64：求1+2+...+n
+面试题64：[求1+2+...+n](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/64_Accumulate)
 
 面试题65：不用加减乘除做加法
 
