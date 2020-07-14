@@ -1,45 +1,28 @@
-# 面试题30：包含min函数的栈
+# 面试题31：栈的压入、弹出序列
 
-【题目】定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是 O(1)。
+【题目】输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如，序列 {1,2,3,4,5} 是某栈的压栈序列，序列 {4,5,3,2,1} 是该压栈序列对应的一个弹出序列，但 {4,3,5,1,2} 就不可能是该压栈序列的弹出序列。
 
 
 
-具体的函数结构如下
+例如
 
 ```python
-class MinStack:
-
-    def __init__(self):
-        """
-        initialize your data structure here.
-        """
-
-    def push(self, x: int) -> None:
-
-    def pop(self) -> None:
-
-    def top(self) -> int:
-
-    def min(self) -> int:
+输入：pushed = [1,2,3,4,5], popped = [4,5,3,2,1]
+输出：true
+解释：我们可以按以下顺序执行：
+push(1), push(2), push(3), push(4), pop() -> 4,
+push(5), pop() -> 5, pop() -> 3, pop() -> 2, pop() -> 1
 ```
 
 
 
-LeetCode:[包含min函数的栈](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/)
+LeetCode:[栈的压入、弹出序列](https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/)
 
 
 
 **解题思路**
 
 
-
-1. 准备两个空栈，一个用来存放数据的数据栈，一个是用来记录栈中最小值的最小值栈
-2. 在数据栈压入元素num的时候，元素num同时和最小值栈的栈顶元素min进行比较，如果最小值栈栈顶元素min≤num，那么在最小值栈中压入min，如果min≥num，那么就压入元素num
-3. 这样最小值栈的栈顶元素就是数据栈的最小值。例子如下图所示
-
-
-
-注意：在LeetCode中很奇葩的一点：在进行pop，top函数时，不需要对数据栈进行判空操作。下面所展示的代码是能通过LeetCode的。
 
 ```Python
 class MinStack:
