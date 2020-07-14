@@ -80,9 +80,9 @@
 
 ## 4.3：举例让抽象问题具体化
 
-面试题30：包含min函数的栈
+面试题30：[包含min函数的栈](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4/30_MinInStack)
 
-面试题31：栈的压入、弹出序列
+面试题31：[栈的压入、弹出序列](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4/31_StackPushPopOrder)
 
 面试题32：从上到下打印二叉树
 
