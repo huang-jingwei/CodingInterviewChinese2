@@ -22,42 +22,29 @@ LeetCode:[栈的压入、弹出序列](https://leetcode-cn.com/problems/zhan-de-
 
 **解题思路**
 
+开辟一个辅助栈，模拟入栈出战过程(假设pa为入栈序列，pb为出战序列)
 
+- pa中的元素依次压入辅助栈
+- 新压入的元素与弹出序列的栈底相同，辅助栈弹出，同时pb向上移动
+- 不相同了pa中的元素继续入辅助栈
 
 ```Python
-class MinStack:
+#函数功能：判断整数序列poped是否为整数序列pushed的弹出序列
+#参数说明：pushed，popped分别为两个整数序列
 
-    def __init__(self):
-        """
-        initialize your data structure here.
-        """
-        self.array=[]       #初始化数据栈，用来存放数据
-        self.minArray=[]    #初始化最小数据栈，栈顶数据即为数据栈最小的元素
+def StackPushPopOrder(pushed,popped):
+    stack = []  # 辅助数据栈，用来模拟数据进栈和出栈过程
+    index = 0   # 移动下标，用来记录弹出元素在弹出数据栈的下标
+    for num in pushed:     # 遍历输入数据栈
+        stack.append(num)  # 数据入账
 
-
-    def push(self, x: int) -> None:
-        self.array.append(x)               #数据栈直接压入元素
-        if len(self.minArray)==0:
-            self.minArray.append(x)
-        else:
-            if x<=self.minArray[-1]:
-                self.minArray.append(x)
-            else:
-                self.minArray.append(self.minArray[-1])
-
-
-    def pop(self) -> None:
-        item=self.array.pop()
-        self.minArray.pop()
-        return item
-
-
-    def top(self) -> int:
-        return self.array[-1]
-
-
-    def min(self) -> int:
-        return self.minArray[-1]
+        # 如果数据栈的栈顶元素和弹出数据栈的头部元素相同，即数据栈中该元素此时应该弹出
+        while len(stack) != 0 and stack[-1] == popped[index]:
+            stack.pop()
+            index = index + 1
+    # 若弹出数据栈为输入数据栈的弹出序列，那么此时应该弹出数据栈应该已经遍历结束了
+    # 移动光标提取走一步，所以此时index应该为len(poped)
+    return index == len(popped)
 ```
 
 
