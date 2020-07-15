@@ -1,14 +1,21 @@
-# 面试题5：替换空格
+# 面试题6：从尾到头打印链表
 
-**【题目】：**  请实现一个函数，把字符串 `s` 中的每个空格替换成"%20"。
+**【题目】：**  输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
 
-例如：输入“We are happy.”,则输出““We%20are%20happy.”
+链表节点结构的定义
+
+```python
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+```
 
 
 
 
 
-LeetCode:[替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/)
+LeetCode:[从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/)
 
 
 
@@ -16,20 +23,21 @@ LeetCode:[替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/)
 
 【解题思路】
 
-解法一：先将字符串的各个元素都取出，放到数组中。对数组元素进行修改，再将修改后的元素拼接起来。
+逆序打印实质上就是数据的先进后出。那么这道题目可以结合栈结构进行求解。
+
+1、遍历链表，依次将节点压入数据栈；
+
+2、遍历结束后，再依次从数据栈中弹出元素，这样就可以实现链表元素的逆序打印。
 
 ```python
-#函数功能：把字符串 s 中的每个空格替换成"%20"
-#解法一：利用Python数据结构的特性
-#基本思路：先将字符串的各个元素都取出，放到数组中。对数组元素进行修改，再将修改后的元素拼接起来。
-def ReplacesSpaces_right(s):
-    array = [s[i] for i in range(len(s))]
-    for i in range(len(array)):
-        if array[i] == " ":
-            array[i] = '%20'
-    string = ""
-    for i in range(len(array)):
-        string = string + array[i]
-    return string
+def reversePrint(head):
+    stack = []
+    while head != None:
+        stack.append(head)
+        head = head.next
+    array = []
+    while len(stack) > 0:
+        array.append(stack.pop().val)
+    return array
 ```
 
