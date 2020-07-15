@@ -14,7 +14,7 @@
 
 面试题4：[二维数组中的查找](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/4_FindInPartiallySortedMatrix)
 
-面试题5：替换空格
+面试题5：[替换空格](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/5_ReplacesSpaces)
 
 面试题6：从尾到头打印链表
 
