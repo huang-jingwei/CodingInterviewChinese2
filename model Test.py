@@ -2,6 +2,11 @@ import  numpy as np
 import random
 
 
+
+
+
+
+
 #对数器模块
 
 
