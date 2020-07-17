@@ -23,31 +23,18 @@
 
 # 第3章：[高质量的代码](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3)
 
-## 3.3：代码的完整性
 
-面试题16：[数值的n次方](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/16_Power)
 
-面试题17：[打印从1到最大的n位数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/17_PrintToMaxOfNDigits)
+| 题目序号 |                          本人的题解                          |                         LeetCode链接                         | 题目序号 |                          本人的题解                          |                         LeetCode链接                         |
+| :------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|    16    | [数值的整数次方](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/16_Power) | [数值的n次方](https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/) |    22    | [链表中倒数第k个节点](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/22_KthNodeFormEnd) | [链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/) |
+|    17    | [打印从1到最大的n位数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/17_PrintToMaxOfNDigits) | [打印从1到最大的n位数](https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/) |    23    | [链表中环的入口节点](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/23_EntryNodeInListLoop) | [链表中环的入口节点](https://leetcode-cn.com/problems/linked-list-cycle-ii/) |
+|    18    | [删除链表的节点](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/18_DeleteNodeInList) | [删除链表的节点](https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/) |    24    | [反转链表](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/24_ReverseList) | [反转链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/) |
+|    19    |                        正则表达式匹配                        |                        正则表达式匹配                        |    25    | [合并两个排序的链表](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/25_MergeSortedLists) | [合并两个排序的链表](https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/) |
+|    20    |                       表示数组的字符串                       |                       表示数组的字符串                       |    26    |                          树的子结构                          |                          树的子结构                          |
+|    21    | [调整数组顺序使奇数位于偶数的前面](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/21_ReorderArray) | [调整数组顺序使奇数位于偶数的前面](https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/) |          |                                                              |                                                              |
 
-面试题18：[删除链表的节点](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/18_DeleteNodeInList)
 
-面试题19：正则表达式匹配
-
-面试题20：表示数组的字符串
-
-面试题21：[调整数组顺序使奇数位于偶数的前面](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/21_ReorderArray)
-
-## 3.4：代码的鲁棒性
-
-面试题22：[链表中倒数第k个节点](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/22_KthNodeFormEnd)
-
-面试题23：[链表中环的入口节点](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/23_EntryNodeInListLoop)
-
-面试题24：[反转链表](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/24_ReverseList)
-
-面试题25：[合并两个排序的链表](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/25_MergeSortedLists)
-
-面试题26：树的子结构
 
 # 第4章：[解决面试题的思路](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4)
 
