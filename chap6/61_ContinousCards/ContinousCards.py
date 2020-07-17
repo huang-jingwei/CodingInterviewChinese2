@@ -1,43 +1,32 @@
-import random
+class Solution:
+    def isStraight(self, nums: List[int]) -> bool:
+        List = sorted(nums)      # 对输入数组进行升序排序
+        if List[0] == List[-1]:  # 特殊情形下，五张牌都是大小王
+            return True
 
-# 函数功能：递归
-# 算法时间复杂度：O(N)
-def Accumulate(number):
-    return number>=1 and number+Accumulate(number-1)
-######################下面代码是测试模块代码##################################
+        data = {}  # 用来记录每个扑克牌出现的次数
 
-# 函数功能： 求1+2+...+n
-# 基本思路：直接相加
-# 算法时间复杂度：O(N)
-def Accumulate_right1(number):
-    if number== None or number==0:      # 若输入数组为空，直接输出0
-        return 0
-    count = 0                           # 初始化计数器，用来记录总和
-    for i in range(number+1):
-        count=count+i
-    return count
+        # 其他情形
+        # 除大小王的数值0外，顺子中不能出现重复数字
+        # 除大小王的数值0外，最大数值和最小数值不能差值不能大于4
 
+        maxValue = 0  # 初始化这五张扑克牌的最大值和最小值
+        minValue = 13
 
-# 函数功能： 求1+2+...+n
-# 基本思路：等差数列的求和公式sum=(a1+an)*n/2
-# 算法时间复杂度：O(N)
-def Accumulate_right2(number):
-    if number== None or number==0:       # 若输入数组为空，直接输出0
-        return 0
-    return int((1+number)*number/2)
+        for index in range(len(List)):
 
+            if List[index] <= minValue and List[index] != 0:  # 更新扑克牌的最大值和最小值
+                minValue = List[index]
+            if List[index] >= maxValue and List[index] != 0:
+                maxValue = List[index]
 
-if __name__=="__main__":
-
-    # 采用对数器方法进行对所写代码进行验证,找到数组中的逆序对个数
-    errorCount = 0  # 记录测试过程中算法求解错误的次数
-    for i in range(10000):
-        number = random.randint(0,100)                   # 生成一个随机数
-        right =Accumulate_right1(number)                  # 对照组实验，思路一
-        test = Accumulate(number)                       # 改进后算法，思路二
-        if right == test:
-            print("第%d次测试：测试准确" % (i))
+            if List[index] not in data:                      # 用字典存放扑克牌出现的次数
+                data[List[index]] = 1
+            elif List[index] != 0 and List[index] in data:  # 存在非0的重复数字，不可能存在顺子
+                return False
+            elif List[index] == 0 and List[index] in data:  # 出现多张大小王
+                data[List[index]] += 1
+        if maxValue - minValue > 4:                         
+            return False
         else:
-            print("第%d次测试：测试错误" % (i))
-            errorCount = errorCount + 1
-    print("测试过程中算法求解错误的次数%d" % (errorCount))
+            return True
