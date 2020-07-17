@@ -51,18 +51,28 @@ def MaximalProfit_right1(array):
 
 
 
-**思路二：公式**
+**思路二：记录当前节点前的股票收入最小值**
 
-例如等差数列的求和公式
+记录当前节点前的股票收入最小值minPrePrices，那么当前股票收入prices[i]和minPrePrices之间的差值就是当前能获取的最大利润
+
+算法时间复杂度：O(N)
 
 ```python
-# 函数功能： 求1+2+...+n
-# 基本思路：等差数列的求和公式sum=(a1+an)*n/2
-# 算法时间复杂度：O(N)
-def Accumulate_right2(number):
-    if number== None or number==0:       # 若输入数组为空，直接输出0
+#函数功能： 找出股票的最大利润
+#基本思路：思路二，算法时间复杂度：O(N)
+#记录当前节点前的股票收入最小值minPrePrices，那么当前股票收入prices[i]
+#和minPrePrices之间的差值就是当前能获取的最大利润
+def maxProfit(prices) :
+    if prices ==None or len(prices ) < 2:
         return 0
-    return int((1+number)*number/2)
+    minPrePrices = prices[0]                     # 记录当前节点前的股票最小值
+    maxProfit = 0                                # 股票收入最大利润
+    for i in range(len(prices)):
+        if prices[i] <= minPrePrices:            # 更新当前节点前的股票最小值
+            minPrePrices = prices[i]
+        if prices[i] - minPrePrices >= maxProfit: # 更新股票最大收入
+            maxProfit = prices[i] - minPrePrices
+    return maxProfit
 ```
 
 
