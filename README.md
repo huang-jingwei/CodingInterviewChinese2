@@ -4,39 +4,20 @@
 
 # 第2章 ：[面试所需的基础知识](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2)
 
-## 2.3：数据结构
 
-面试题1：赋值运算符函数
 
-面试题2：实现Singleton模式
 
-面试题3：[数组中重复出现的数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/3_duplicate)
 
-面试题4：[二维数组中的查找](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/4_FindInPartiallySortedMatrix)
-
-面试题5：[替换空格](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/5_ReplacesSpaces)
-
-面试题6：[从尾到头打印链表](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/6_PrintListReversedOrder)
-
-面试题7：重建二叉树
-
-面试题8：二叉树的下一节点
-
-面试题9：用两个栈实现队列
-
-## 2.4：算法和数据操作
-
-面试题10：[斐波那契数列](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/10_Fibonacci)
-
-面试题11：[旋转数组的最小数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/11_MinNumberInRotatedArray)
-
-面试题12：矩阵中的路径
-
-面试题13：[机器人的运动范围](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/13_RobotMove)
-
-面试题14：剪绳子
-
-面试题15：[二进制中1的个数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/15_NumberOf1InBinary)
+| 题目序号 |                          本人的题解                          |                         LeetCode链接                         | 题目序号 |                          本人的题解                          |                         LeetCode链接                         |
+| :------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|    1     |                        赋值运算符函数                        |                        赋值运算符函数                        |    9     |                       用两个栈实现队列                       |                       用两个栈实现队列                       |
+|    2     |                      实现Singleton模式                       |                      实现Singleton模式                       |    10    | [斐波那契数列](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/10_Fibonacci) | [斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/) |
+|    3     | [数组中重复出现的数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/3_duplicate) | [数组中重复出现的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/) |    11    | [旋转数组的最小数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/11_MinNumberInRotatedArray) | [旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/) |
+|    4     | [二维数组中的查找](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/4_FindInPartiallySortedMatrix) | [二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/) |    12    |                         矩阵中的路径                         |                         矩阵中的路径                         |
+|    5     | [替换空格](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/5_ReplacesSpaces) | [替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/) |    13    | [机器人的运动范围](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/13_RobotMove) | [机器人的运动范围](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/) |
+|    6     | [从尾到头打印链表](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/6_PrintListReversedOrder) | [从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/) |    14    |                            剪绳子                            |                            剪绳子                            |
+|    7     |                          重建二叉树                          |                          重建二叉树                          |    15    | [二进制中1的个数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/15_NumberOf1InBinary) | [二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/) |
+|    8     |                       二叉树的下一节点                       |                       二叉树的下一节点                       |          |                                                              |                                                              |
 
 
 
