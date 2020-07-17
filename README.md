@@ -38,61 +38,34 @@
 
 # 第4章：[解决面试题的思路](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4)
 
-## 4.2：画图让抽象问题具体化
 
-面试题27：二叉树的镜像
 
-面试题28：对称的二叉树
+| 题目序号 |                          本人的题解                          |                         LeetCode链接                         | 题目序号 |        本人的题解        |       LeetCode链接       |
+| :------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------: | :----------------------: | :----------------------: |
+|    27    |                         二叉树的镜像                         |                         二叉树的镜像                         |    33    | 二叉搜索树的后序遍历序列 | 二叉搜索树的后序遍历序列 |
+|    28    |                         对称的二叉树                         |                         对称的二叉树                         |    34    | 二叉树中和为某一值的路径 | 二叉树中和为某一值的路径 |
+|    29    |                        顺时针打印矩阵                        |                        顺时针打印矩阵                        |    35    |      复杂链表的复制      |      复杂链表的复制      |
+|    30    | [包含min函数的栈](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4/30_MinInStack) | [包含min函数的栈](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/) |    36    |   二叉搜索树与双向链表   |   二叉搜索树与双向链表   |
+|    31    | [栈的压入、弹出序列](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4/31_StackPushPopOrder) | [栈的压入、弹出序列](https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/) |    37    |       字符串的排列       |       字符串的排列       |
+|    32    |                      从上到下打印二叉树                      |                      从上到下打印二叉树                      |          |                          |                          |
 
-面试题29：顺时针打印矩阵
 
-## 4.3：举例让抽象问题具体化
-
-面试题30：[包含min函数的栈](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4/30_MinInStack)
-
-面试题31：[栈的压入、弹出序列](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4/31_StackPushPopOrder)
-
-面试题32：从上到下打印二叉树
-
-面试题33：二叉搜索树的后序遍历序列
-
-面试题34：二叉树中和为某一值的路径
-
-## 4.4：分解让复杂问题简单化
-
-面试题35：复杂链表的复制
-
-面试题36：二叉搜索树与双向链表
-
-面试题37：字符串的排列
 
 # 第5章 ：[优化时间和空间效率](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5)
 
-## 5.2：时间效率
 
-面试题39：[数组出现次数超过一半的数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/39_MoreThanHalfNum)
 
-面试题40：[最小的k个数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/40_GetLeastNumbers)
 
-面试题41：[数据流的中位数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/41_StreamMedian)
 
-面试题42：[连续子数组的最大和](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/42_GreatestSumOfSubarrays)
-
-面试题43：[1到n整数中1出现的次数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/43_NumberOf1)
-
-面试题47：[礼物的最大价值](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/47_MaxValueOfGifts)
-
-面试题48：最长不含重复字符的子字符串
-
-## 5.3：时间效率与空间效率的平衡
-
-面试题49：[丑数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/49_UglyNumber)
-
-面试题50：[第一个只出现一次的字符](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/50_FirstNotRepeatingChar)
-
-面试题51：[数组中的逆序对](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/51_InversePairs)
-
-面试题52：两个链表的第一个公共节点
+| 题目序号 |                          本人的题解                          |                         LeetCode链接                         | 题目序号 |                          本人的题解                          |                         LeetCode链接                         |
+| :------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|    39    | [数组出现次数超过一半的数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/39_MoreThanHalfNum) | [数组出现次数超过一半的数字](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/) |    46    |                      把数字翻译成字符串                      |                      把数字翻译成字符串                      |
+|    40    | [最小的k个数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/40_GetLeastNumbers) | [最小的k个数](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/) |    47    | [礼物的最大价值](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/47_MaxValueOfGifts) | [礼物的最大价值](https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/) |
+|    41    | [数据流的中位数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/41_StreamMedian) | [数据流的中位数](https://leetcode-cn.com/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/) |    48    |                  最长不含重复字符的子字符串                  |                  最长不含重复字符的子字符串                  |
+|    42    | [连续子数组的最大和](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/42_GreatestSumOfSubarrays) | [连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/) |    49    | [丑数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/49_UglyNumber) |   [丑数](https://leetcode-cn.com/problems/chou-shu-lcof/)    |
+|    43    | [1到n整数中1出现的次数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/43_NumberOf1) | [1到n整数中1出现的次数](https://leetcode-cn.com/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/) |    50    | [第一个只出现一次的字符](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/50_FirstNotRepeatingChar) | [第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/) |
+|    44    |                    数字序列中某一位的数字                    |                    数字序列中某一位的数字                    |    51    | [数组中的逆序对](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/51_InversePairs) | [数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/) |
+|    45    |                      把数组排成最小的数                      |                      把数组排成最小的数                      |    52    |                   两个链表的第一个公共节点                   |                   两个链表的第一个公共节点                   |
 
 
 
