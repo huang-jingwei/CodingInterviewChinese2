@@ -33,16 +33,18 @@ LeetCode:[股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui
 算法时间复杂度：O(N^2)
 
 ```Python
-# 函数功能： 求1+2+...+n
-# 基本思路：直接相加
-# 算法时间复杂度：O(N)
-def Accumulate_right1(number):
-    if number== None or number==0:      # 若输入数组为空，直接输出0
-        return 0
-    count = 0                           # 初始化计数器，用来记录总和
-    for i in range(number+1):
-        count=count+i
-    return count
+# 函数功能： 找出股票的最大利润
+#基本思路：暴力解法，算法时间复杂度O(N^2)
+# 搜索当前时间节点后的全部节点，找出股票收入最大的节点。
+# 然后拿股票收入最大与当前的收入做比较，若比当前股票收入大，那么就产生利润，
+# 并且此时的利润为最大利润。否则不交易股票，不产生利润。
+def MaximalProfit_right1(array):
+    maxProfit=0
+    for i in range(len(array)):
+        for j in range(i,len(array)):
+            if array[j]-array[i]>=maxProfit:
+                maxProfit=array[j]-array[i]
+    return maxProfit
 ```
 
 
