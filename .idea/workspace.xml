@@ -58,10 +58,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chap2/15_NumberOf1InBinary/NumberOf1InBinary.py">
+        <entry file="file://$PROJECT_DIR$/chap3/18_DeleteNodeInList/DeleteNodeInList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="420">
+              <caret line="29" column="27" lean-forward="true" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -90,7 +90,6 @@
         <option value="$PROJECT_DIR$/chap5/41_StreamMedian/StreamMedian.py" />
         <option value="$PROJECT_DIR$/chap3/16_Power/Power.py" />
         <option value="$PROJECT_DIR$/chap3/17_PrintToMaxOfNDigits/PrintToMaxOfNDigits.py" />
-        <option value="$PROJECT_DIR$/chap3/18_DeleteNodeInList/DeleteNodeInList.py" />
         <option value="$PROJECT_DIR$/chap6/64_Accumulate/Accumulate.py" />
         <option value="$PROJECT_DIR$/chap6/57_TwoNumbersWithSum/TwoNumbersWithSum_01.py" />
         <option value="$PROJECT_DIR$/test.py" />
@@ -99,6 +98,7 @@
         <option value="$PROJECT_DIR$/chap2/13_RobotMove/StringPathInMatrix.py" />
         <option value="$PROJECT_DIR$/chap2/13_RobotMove/RobotMove.py" />
         <option value="$PROJECT_DIR$/chap2/15_NumberOf1InBinary/NumberOf1InBinary.py" />
+        <option value="$PROJECT_DIR$/chap3/18_DeleteNodeInList/DeleteNodeInList.py" />
       </list>
     </option>
   </component>
@@ -266,12 +266,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18809272" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18809272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31453362" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31453362" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -312,13 +312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chap3/18_DeleteNodeInList/DeleteNodeInList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -396,13 +389,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chap2/15_NumberOf1InBinary/NumberOf1InBinary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="20" lean-forward="true" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chap2/12_StringPathInMatrix/StringPathInMatrix.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/chap2/15_NumberOf1InBinary/NumberOf1InBinary.py">
+    <entry file="file://$PROJECT_DIR$/chap3/18_DeleteNodeInList/DeleteNodeInList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="420">
+          <caret line="29" column="27" lean-forward="true" selection-end-line="33" />
         </state>
       </provider>
     </entry>
