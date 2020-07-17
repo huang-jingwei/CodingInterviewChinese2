@@ -1,17 +1,17 @@
 class Solution:
     def movingCount(self, m: int, n: int, k: int) -> int:
-        if m <= 0 or n <= 0 or k < 0:  # 输入为非正数时，为非法输入
+        if m <= 0 or n <= 0 or k < 0:     # 输入为非正数时，为非法输入
             return 0
-        rows = m  # 矩阵的行列数
+        rows = m                          # 矩阵的行列数
         cols = n
         visted = [False] * (rows * cols)  # 布尔列表，记录该位置是否被访问过,False为未访问过，反之为True
         count = self.movingCountCore(k, rows, cols, 0, 0, visted)  # 记录机器人能运动的方格数量
         return count
 
     def movingCountCore(self, k, rows, cols, currentRow, currentCol, visted):
-        count = 0  # 记录机器人从该位置开始搜索，能找到的符合要求的方格数量
+        count = 0                                                              # 记录机器人从该位置开始搜索，能找到的符合要求的方格数量
         if self.checkPosition(k, rows, cols, currentRow, currentCol, visted):  # 判断该位置是否符合运动规则
-            visted[currentRow * cols + currentCol] = True  # 列表中相邻的col个为一行位置的访问布尔数值
+            visted[currentRow * cols + currentCol] = True                      # 列表中相邻的col个为一行位置的访问布尔数值
             # 沿着四个方向继续搜索
             count = 1 + self.movingCountCore(k, rows, cols, currentRow - 1, currentCol, visted) \
                     + self.movingCountCore(k, rows, cols, currentRow + 1, currentCol, visted) \
@@ -26,9 +26,9 @@ class Solution:
     def checkPosition(self, k, rows, cols, currentRow, currentCol, visted):
         if currentRow >= rows or currentCol >= cols or currentRow < 0 or currentCol < 0:  # 判断当前下标是否符合规则
             return False
-        if visted[currentRow * cols + currentCol] == True:  # 判断当前位置是否已经被访问过
+        if visted[currentRow * cols + currentCol] == True:                                # 判断当前位置是否已经被访问过
             return False
-        if self.numDigitSum(currentRow) + self.numDigitSum(currentCol) > k:  # 判断当前下标的数位之和是否超过K
+        if self.numDigitSum(currentRow) + self.numDigitSum(currentCol) > k:               # 判断当前下标的数位之和是否超过K
             return False
         return True
 
