@@ -8,7 +8,11 @@
 
 
 
-LeetCode:[在排序数组中查找数字](https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/)
+LeetCode:
+
+[在排序数组中查找数字](https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/)
+
+[在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
 
 
@@ -38,7 +42,9 @@ def NumberOfK_right(array,k):
 
 
 
-
+```python
+def
+```
 
 
 
