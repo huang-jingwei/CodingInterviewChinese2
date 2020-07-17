@@ -18,6 +18,17 @@
 
 
 
+**示例 1：**
+
+```python
+输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
+输出：true
+```
+
+
+
+
+
 LeetCode:[矩阵中的路径](https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/)
 
 采用回溯法解决该问题
