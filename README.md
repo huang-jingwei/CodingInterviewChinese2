@@ -64,7 +64,7 @@
 
 面试题24：反转链表
 
-面试题25：合并两个排序的链表
+面试题25：[合并两个排序的链表](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/25_MergeSortedLists)
 
 面试题26：数的子结构
 

@@ -1,4 +1,4 @@
-# 面试题21：调整数组顺序使奇数位于偶数前面
+# 面试题25：合并两个排序的链表
 
 
 
@@ -6,33 +6,58 @@
 
 
 
-例如：输入：nums = [1,2,3,4]，输出：[1,3,2,4] 。注：[3,1,2,4] 也是正确的答案之一。
+例如：
+
+```python
+输入：1->2->4, 1->3->4
+输出：1->1->2->3->4->4
+```
 
 
 
-LeetCode:[调整数组顺序使奇数位于偶数前面](https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/)
+LeetCode:[合并两个排序的链表](https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/)
 
 
 
-**解题思路：借鉴荷兰国旗问题的解法**
+**解题思路：采用类似外排的方式对链表进行排序**
 
 
 
 ```Python
-# 函数功能：调整数组顺序使奇数位于偶数前面
-# 基本思路：借鉴荷兰国旗问题的解法
-def ReorderArray(array):
-    if array==None or len(array)==0:    # 输入为空数组时，直接输出
-        return array
-    more=len(array)                     # 数组中，下标≥more的位置均为偶数
-    index = 0                           # 初始化移动下标
-    while index<more:
-        if array[index]%2==1:           # 该位置元素为奇数时，移动下标右前进一位
-            index=index+1
-        else:                           # 该位置元素为偶数时，more减一，当前位置与more位置交换元素
-            more=more-1                 # 注意此时index不可右前进一位，因为并不知道新交换过来的数值的奇偶性
-            array[index],array[more]=array[more],array[index]
-    return array
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        if l1==None and l2==None:       #判断输入是否为空
+            return None
+        array=[]                        #初始化数组来存放节点的信息  
+        while l1 !=None and l2 !=None:  #遍历两个链表，采用类似外排的方法对链表的节点进行排序
+            if l1.val<=l2.val:
+                array.append(l1)
+                l1=l1.next
+            else:
+                array.append(l2)
+                l2=l2.next
+        
+        #至少有一个列表被遍历完了
+        #把剩下的节点信息放入数组array中
+        if l1 ==None:
+            while l2 !=None:
+                array.append(l2)
+                l2=l2.next
+        else:
+            while l1 !=None:
+                array.append(l1)
+                l1=l1.next
+        
+        #把数组array的节点进行重新连接
+        for index in range(len(array)-1):
+            array[index].next=array[index+1]
+        return array[0]
 ```
 
 
