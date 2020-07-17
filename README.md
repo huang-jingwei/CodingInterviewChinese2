@@ -4,10 +4,6 @@
 
 # 第2章 ：[面试所需的基础知识](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2)
 
-
-
-
-
 | 题目序号 |                          本人的题解                          |                         LeetCode链接                         | 题目序号 |                          本人的题解                          |                         LeetCode链接                         |
 | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |    1     |                        赋值运算符函数                        |                        赋值运算符函数                        |    9     |                       用两个栈实现队列                       |                       用两个栈实现队列                       |
@@ -38,8 +34,6 @@
 
 # 第4章：[解决面试题的思路](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4)
 
-
-
 | 题目序号 |                          本人的题解                          |                         LeetCode链接                         | 题目序号 |        本人的题解        |       LeetCode链接       |
 | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------: | :----------------------: | :----------------------: |
 |    27    |                         二叉树的镜像                         |                         二叉树的镜像                         |    33    | 二叉搜索树的后序遍历序列 | 二叉搜索树的后序遍历序列 |
@@ -52,10 +46,6 @@
 
 
 # 第5章 ：[优化时间和空间效率](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5)
-
-
-
-
 
 | 题目序号 |                          本人的题解                          |                         LeetCode链接                         | 题目序号 |                          本人的题解                          |                         LeetCode链接                         |
 | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
@@ -71,39 +61,15 @@
 
 # 第6章：[面试中的各项能力](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6)
 
-## 6.3：知识迁移能力
-
-面试题53：在排序数组中查找数字
-
-面试题54：二叉搜索树的第k大节点
-
-面试题55：二叉树的深度
-
-面试题56：数组中数字出现的次数
-
-面试题57：[和为s的数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/57_TwoNumbersWithSum)
-
-面试题58：翻转字符串
-
-面试题59：队列的最大值
-
-## 6.4：抽象建模能力
-
-面试题60：n个骰子的点数
-
-面试题61：[扑克牌中的顺子](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/61_ContinousCards)
-
-面试题62：圆圈中最后剩下的数字
-
-面试题63：[股票的最大利润](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/63_MaximalProfit)
-
-## 6.5：发散思维
-
-面试题64：[求1+2+...+n](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/64_Accumulate)
-
-面试题65：不用加减乘除做加法
-
-面试题66：构建乘积数组
+| 题目序号 |                          本人的题解                          |                         LeetCode链接                         | 题目序号 |                          本人的题解                          |                         LeetCode链接                         |
+| :------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|    53    |                     在排序数组中查找数字                     |                     在排序数组中查找数字                     |    60    |                        n个骰子的点数                         |                        n个骰子的点数                         |
+|    54    |                    二叉搜索树的第k大节点                     |                    二叉搜索树的第k大节点                     |    61    | [扑克牌中的顺子](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/61_ContinousCards) | https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/ |
+|    55    |                         二叉树的深度                         |                         二叉树的深度                         |    62    |                     圆圈中最后剩下的数字                     |                     圆圈中最后剩下的数字                     |
+|    56    |                     数组中数字出现的次数                     |                     数组中数字出现的次数                     |    63    | [股票的最大利润](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/63_MaximalProfit) | [股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/) |
+|    57    | [和为s的数字](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/57_TwoNumbersWithSum) | [和为s的两个数字](https://leetcode-cn.com/problems/he-wei-sde-liang-ge-shu-zi-lcof/) |    64    | [求1+2+...+n](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/64_Accumulate) | [求1+2+...+n](https://leetcode-cn.com/problems/qiu-12n-lcof/) |
+|    58    |                          翻转字符串                          |                          翻转字符串                          |    65    |                      不用加减乘除做加法                      |                      不用加减乘除做加法                      |
+|    59    |                         队列的最大值                         |                         队列的最大值                         |    66    |                         构建乘积数组                         |                         构建乘积数组                         |
 
 
 
