@@ -58,7 +58,7 @@
 
 ## 3.4：代码的鲁棒性
 
-面试题22：链表中倒数第k个节点
+面试题22：[链表中倒数第k个节点](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/22_KthNodeFormEnd)
 
 面试题23：链表中环的入口节点
 
