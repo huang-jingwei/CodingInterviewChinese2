@@ -26,7 +26,7 @@ class Solution:
                 return False
             elif List[index] == 0 and List[index] in data:  # 出现多张大小王
                 data[List[index]] += 1
-        if maxValue - minValue > 4:                         
+        if maxValue - minValue > 4:
             return False
         else:
             return True
