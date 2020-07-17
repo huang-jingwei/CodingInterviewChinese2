@@ -32,11 +32,11 @@
 
 面试题12：矩阵中的路径
 
-面试题13：机器人的运动范围
+面试题13：[机器人的运动范围](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/13_RobotMove)
 
 面试题14：剪绳子
 
-面试题15：二进制中1的个数
+面试题15：[二进制中1的个数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/15_NumberOf1InBinary)
 
 
 
