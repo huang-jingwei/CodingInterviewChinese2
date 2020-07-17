@@ -39,6 +39,8 @@ LeetCode:[股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui
 # 然后拿股票收入最大与当前的收入做比较，若比当前股票收入大，那么就产生利润，
 # 并且此时的利润为最大利润。否则不交易股票，不产生利润。
 def MaximalProfit_right1(array):
+    if array==None or len(array)<2:
+        return 0
     maxProfit=0
     for i in range(len(array)):
         for j in range(i,len(array)):
