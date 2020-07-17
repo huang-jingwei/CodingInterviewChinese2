@@ -154,7 +154,7 @@
 
 面试题62：圆圈中最后剩下的数字
 
-面试题63：股票的最大利润
+面试题63：[股票的最大利润](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/63_MaximalProfit)
 
 ## 6.5：发散思维
 
