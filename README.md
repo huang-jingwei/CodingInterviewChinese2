@@ -62,11 +62,11 @@
 
 面试题23：链表中环的入口节点
 
-面试题24：反转链表
+面试题24：[反转链表](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/24_ReverseList)
 
 面试题25：[合并两个排序的链表](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap3/25_MergeSortedLists)
 
-面试题26：数的子结构
+面试题26：树的子结构
 
 # 第4章：[解决面试题的思路](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4)
 
