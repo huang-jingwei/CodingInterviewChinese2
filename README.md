@@ -32,7 +32,7 @@
 
 面试题12：[矩阵中的路径](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/12_StringPathInMatrix)
 
-面试题13：机器人的运动范围
+面试题13：[机器人的运动范围](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/13_RobotMove)
 
 面试题14：剪绳子
 
