@@ -150,7 +150,7 @@
 
 面试题60：n个骰子的点数
 
-面试题61：扑克牌中的顺子
+面试题61：[扑克牌中的顺子](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap6/61_ContinousCards)
 
 面试题62：圆圈中最后剩下的数字
 
