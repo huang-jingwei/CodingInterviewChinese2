@@ -55,7 +55,7 @@
 |    42    | [连续子数组的最大和](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/42_GreatestSumOfSubarrays) | [连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/) |    49    | [丑数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/49_UglyNumber) |   [丑数](https://leetcode-cn.com/problems/chou-shu-lcof/)    |
 |    43    | [1到n整数中1出现的次数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/43_NumberOf1) | [1到n整数中1出现的次数](https://leetcode-cn.com/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/) |    50    | [第一个只出现一次的字符](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/50_FirstNotRepeatingChar) | [第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/) |
 |    44    |                    数字序列中某一位的数字                    |                    数字序列中某一位的数字                    |    51    | [数组中的逆序对](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/51_InversePairs) | [数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/) |
-|    45    |                      把数组排成最小的数                      |                      把数组排成最小的数                      |    52    |                   两个链表的第一个公共节点                   | [两个链表的第一个公共节点](https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/) |
+|    45    |                      把数组排成最小的数                      |                      把数组排成最小的数                      |    52    | [两个链表的第一个公共节点](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap5/52_FirstCommonNodesInLists) | [两个链表的第一个公共节点](https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/) |
 
 
 

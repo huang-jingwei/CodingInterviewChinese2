@@ -4,6 +4,17 @@
 
 【题目】 输入两个链表，找出它们的第一个公共节点。
 
+
+
+链表节点的定义如下
+
+```python
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+```
+
 【例如】
 
 如下面的两个链表：在节点 c1 开始相交。
@@ -28,26 +39,52 @@ LeetCode:[两个链表的第一个公共节点](https://leetcode-cn.com/problems
 
 
 
-**思路一：暴力解法**
+**解题思路**
 
-最简单直接的方法就是每扫描到一个数字，逐个比较该数字和它后面的数字的大小。如果后面的数字比他小，则两个数字组成一个逆序对。
+1、计算出两个链表的长度lengthNodeA和lengthNodeB，从而得到两个链表的长度差lengthGap；
 
-算法时间复杂度：O(N^2)
+2、长度较长的列表对应的头结点先移动，移动长度为lengthGap；
+
+3、经过上面的调整步骤后，此时两个链表的节点距离公共节点的距离是一样的。那么此时让两个节点同时移动就能找出公共节点。
+
+
+
+算法时间复杂度：O(N)
 
 ```Python
-# 函数功能：找到数组中的逆序对个数
-# 基本思路：暴力搜索
-# 每扫描到一个数字，逐个比较该数字和它后面的数字的大小。如果后面的数字比他小，则两个数字组成一个逆序对
-# 算法时间复杂度：O(N^2)
-def InversePairs_right(array):
-    if array== None or len(array)==0:       # 判断输入是否为空
-        return 0
-    count = 0                               # 初始化计数器，用来记录逆序对的总个数
-    for i in range(len(array)):             # 遍历数组
-        for j in range(i+1,len(array)):
-            if array[i]>array[j]:           # 找到逆序对，计数器加一
-                count=count+1              
-    return count
+import copy
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+        if headA == None or headB == None:      # 判断输入节点是否为空
+            return None
+        # 分别计算两个链表的长度,从而计算出两个链表的长度差
+        nodeA = copy.copy(headA)
+        nodeB = copy.copy(headB)
+        lengthNodeA = 0
+        lengthNodeB = 0
+        while nodeA != None:
+            lengthNodeA = lengthNodeA + 1
+            nodeA = nodeA.next
+        while nodeB != None:
+            lengthNodeB = lengthNodeB + 1
+            nodeB = nodeB.next
+        lengthGap = abs(lengthNodeA - lengthNodeB)  # 两个链表长度差
+
+        # 长度较长的列表的头结点先进行移动，移动距离是两个链表的长度差
+        if lengthNodeA >= lengthNodeB:
+            while lengthGap > 0:
+                lengthGap = lengthGap - 1
+                headA = headA.next
+        else:
+            while lengthGap > 0:
+                lengthGap = lengthGap - 1
+                headB = headB.next
+
+        # 通过上面的调整，此时两个链表的节点距离公共交点的距离是一致的
+        while headA != headB:
+            headA = headA.next
+            headB = headB.next
+        return headA
 ```
 
 
