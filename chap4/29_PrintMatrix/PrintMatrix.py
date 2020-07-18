@@ -1,33 +1,27 @@
-class MinStack:
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        if matrix == None or len(matrix) < 1: # 若输入为空，则返回空列表
+            return []
+        array = list()                        # 空数组，用来存放矩阵顺时针打印过程中的数字
+        leftRow = 0                           # 打印区域的左上角，右下角端点坐标
+        leftCol = 0
+        rightRow = len(matrix) - 1
+        rightCol = len(matrix[0]) - 1
+        while True:
+            # 按照四次过程来获取顺时针打印过程的数值
+            for index in range(leftCol, rightCol + 1): array.append(matrix[leftRow][index])
+            leftRow = leftRow + 1     # 更新左上角端点行坐标
+            if leftRow > rightRow: break
 
-    def __init__(self):
-        """
-        initialize your data structure here.
-        """
-        self.array=[]       #初始化数据栈，用来存放数据
-        self.minArray=[]    #初始化最小数据栈，栈顶数据即为数据栈最小的元素
+            for index in range(leftRow, rightRow + 1): array.append(matrix[index][rightCol])
+            rightCol = rightCol - 1  # 更新右下角端点列坐标
+            if leftCol > rightCol: break
 
+            for index in range(rightCol, leftCol - 1, -1): array.append(matrix[rightRow][index])
+            rightRow = rightRow - 1  # 更新右下角端点行坐标
+            if leftRow > rightRow: break
 
-    def push(self, x: int) -> None:
-        self.array.append(x)               #数据栈直接压入元素
-        if len(self.minArray)==0:
-            self.minArray.append(x)
-        else:
-            if x<=self.minArray[-1]:
-                self.minArray.append(x)
-            else:
-                self.minArray.append(self.minArray[-1])
-
-
-    def pop(self) -> None:
-        item=self.array.pop()
-        self.minArray.pop()
-        return item
-
-
-    def top(self) -> int:
-        return self.array[-1]
-
-
-    def min(self) -> int:
-        return self.minArray[-1]
+            for index in range(rightRow, leftRow - 1, -1): array.append(matrix[index][leftCol])
+            leftCol = leftCol + 1  # 更新左上角端点的列坐标
+            if leftCol > rightCol: break
+        return array
