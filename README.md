@@ -38,7 +38,7 @@
 | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------: | :----------------------: | :----------------------: |
 |    27    |                         二叉树的镜像                         |                         二叉树的镜像                         |    33    | 二叉搜索树的后序遍历序列 | 二叉搜索树的后序遍历序列 |
 |    28    |                         对称的二叉树                         |                         对称的二叉树                         |    34    | 二叉树中和为某一值的路径 | 二叉树中和为某一值的路径 |
-|    29    |                        顺时针打印矩阵                        |                        顺时针打印矩阵                        |    35    |      复杂链表的复制      |      复杂链表的复制      |
+|    29    | [顺时针打印矩阵](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4/29_PrintMatrix) | [顺时针打印矩阵](https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/) |    35    |      复杂链表的复制      |      复杂链表的复制      |
 |    30    | [包含min函数的栈](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4/30_MinInStack) | [包含min函数的栈](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/) |    36    |   二叉搜索树与双向链表   |   二叉搜索树与双向链表   |
 |    31    | [栈的压入、弹出序列](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap4/31_StackPushPopOrder) | [栈的压入、弹出序列](https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/) |    37    |       字符串的排列       |       字符串的排列       |
 |    32    |                      从上到下打印二叉树                      |                      从上到下打印二叉树                      |          |                          |                          |
