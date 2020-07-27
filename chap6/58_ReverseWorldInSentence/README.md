@@ -34,8 +34,9 @@ LeetCode:[翻转单词顺序](https://leetcode-cn.com/problems/fan-zhuan-dan-ci-
 翻转字符串本质上就是字符串的左侧右侧对应位置相互交换元素。
 
 ```Python
-#函数功能：翻转字符串
+#函数功能：翻转字符串，对应题目一
 #解题思路：翻转字符串本质上就是字符串的左侧右侧对应位置相互交换元素
+
 class Solution:
     def reverseWords(self, s: str) -> str:
         if s == None:
@@ -85,7 +86,33 @@ LeetCode:[翻转左侧字符串](https://leetcode-cn.com/problems/zuo-xuan-zhuan
 
 **解题思路**
 
+解法一：一种比较暴力的方法，分别将字符串中左右对应位置的元素提取出来，再进行重新拼接
 
+```Python
+#函数功能：左旋转字符串，对应题目二
+#解题思路：一种比较暴力的方法，分别将字符串中左右对应位置的元素提取出来，再进行重新拼接
+class Solution:
+    def reverseLeftWords(self, s: str, n: int) -> str:
+        if s == None:                      #对输入字符串进行判空
+            return None
+        stringList = []                    #将输入字符串每个位置的字符用列表结构存储起来
+        for index in range(len(s)):
+            stringList.append(s[index])
+
+        leftArray = stringList[:n]        #分别将字符串中左右对应位置的元素提取出来
+        rightArray = [""]
+        if n <= len(stringList) - 1:
+            rightArray = stringList[n:]
+ 
+        string = ""                      #将上诉所得字符元素进行重新拼接
+        for index in range(len(rightArray)):
+            string = string + rightArray[index]
+
+        for index in range(len(leftArray)):
+            string = string + leftArray[index]
+
+        return string
+```
 
 
 
