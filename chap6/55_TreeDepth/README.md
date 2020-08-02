@@ -1,69 +1,82 @@
-# 面试题56：数组中数字出现的次数
+# 面试题55：二叉树的深度
 
-【题目】一个整型数组 nums 里除两个数字之外，其他数字都出现了两次。请写程序找出这两个只出现一次的数字。要求时间复杂度是O(n)，空间复杂度是O(1)。
+【题目】输入一棵二叉树的根节点，求该树的深度。从根节点到叶节点依次经过的节点（含根、叶节点）形成树的一条路径，最长路径的长度为树的深度。
 
+例如：
 
-
-**示例 1：**
-
-```python
-输入：nums = [4,1,4,6]
-输出：[1,6] 或 [6,1]
-```
-
-
-
-**示例 2：**
+给定二叉树 [3,9,20,null,null,15,7]，
 
 ```python
-输入：nums = [1,2,10,4,1,4,3,3]
-输出：[2,10] 或 [10,2]
+    3
+   / \
+  9  20
+    /  \
+   15   7
 ```
 
+返回它的最大深度 3 。
 
 
-LeetCode:[数组中数字出现的次数](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/)
 
 
 
-**思路一：暴力解法**
+LeetCode:[二叉树的深度](https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/)
 
-最简单直接的方法就是用一个哈希表来存放数组中不同数值元素出现的次数。缺点是空间复杂度是O(n)。
+
+
+**思路一：递归方法**
+
+一颗树的高度就是它左子树高度和右子树高度的较大者，然后再加1。
 
 ```Python
-#函数功能：题目一的思路一，数组中数字出现的次数
-#基本思路：哈希表
-class Solution:
-    def singleNumbers(self, nums: List[int]) -> List[int]:
-        number = []  # 存放出现两次的数字
-        data = {}    # 用字典来模拟哈希表结构
-        for index in range(len(nums)):
-            if nums[index] not in data:
-                data[nums[index]] = 1
-            else:
-                data[nums[index]] += 1
+# Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
-        for num, times in data.items():
-            if times != 2:
-                number.append(num)
-        return number
+class Solution:
+    def maxDepth(self, root: TreeNode) -> int:
+        if root==None:                       # 输入节点为空时，返回节点的高度为0
+            return 0
+        leftHeight=self.maxDepth(root.left)  #当前节点左子树的高度
+        rightHeight=self.maxDepth(root.right)#当前节点右子树的高度
+        return max(leftHeight,rightHeight)+1
 ```
 
 
 
-**思路二：异或**
+**思路二：层序遍历**
 
-算法时间复杂度：O(N)，空间复杂度是O(1)
-
-异或运算的几个性质
-
-- 交换律
-- 结合律（即(a^b)^c == a^(b^c)）
-- 对于任何数x，都有x^x=0，x^0=x
-- 自反性 A XOR B XOR B = A xor 0 = A ---> A XOR B = C 则 C XOR B = A
+**关键点：** 每遍历一层，则计数器 +1+1 ，直到遍历完成，则可得到树的深度。
 
 ```python
-这个解法还没想明白
+# Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+class Solution:
+    def maxDepth(self, root: TreeNode) -> int:     
+        if root==None:  #二叉树头结点为空时，树深度为0
+            return 0     
+        depth=0        #初始化二叉树的深度
+        queue=[]       #层次遍历的队列结构
+        queue.append(root)
+
+        while queue:
+            temp=[]            #初始化列表，用来存放下一层节点
+            for node in queue: #遍历当前层的节点，在temp结构中压入他们的儿子节点
+                if node.left !=None:
+                    temp.append(node.left)
+                if node.right !=None:
+                    temp.append(node.right)            
+            queue=temp    
+            depth +=1
+        return depth    
 ```
 
 
