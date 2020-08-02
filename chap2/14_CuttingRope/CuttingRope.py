@@ -18,3 +18,27 @@ class Solution:
                 for j in range(1,length):
                     dp[length]=max(dp[length],j*dp[length-j])
             return dp[-1]
+
+
+class Solution2:
+    def cuttingRope(self, n: int) -> int:
+        if n == 1:  # 1米总长的绳子最大乘积为1
+            return 1
+
+        # waysCut[i]：代表i米的绳子可生成的最大乘积
+        # 0米总长的绳子的最大乘积为0,1米总长的绳子最大乘积为1
+        waysCut = [0] * (n + 1)
+        waysCut[0] = 1
+
+        # 采用动态规划方法，从小到大依次遍历各个总长度的绳子
+        for length in range(2, n + 1):
+
+            # 将绳子的长度分为两大段：subLength和length-subLength
+            # 然后分别计算这两大段的最大乘积，再将他们的最大乘积相乘就是最后的最大乘积
+            for subLength in range(1, length):
+                # 再来考虑对这两大段是否还要继续划分
+                maxLength1 = max(subLength, waysCut[subLength])
+                maxLength2 = max(length - subLength, waysCut[length - subLength])
+                # maxLength1*maxLength2代表两大段的最大乘积
+                waysCut[length] = max(waysCut[length], maxLength1 * maxLength2)
+        return waysCut[-1]
