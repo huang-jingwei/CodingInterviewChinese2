@@ -26,46 +26,37 @@ LeetCode:[n个骰子的点数](https://leetcode-cn.com/problems/nge-tou-zi-de-di
 
 
 
-**解题思路：分情况讨论**
+**解题思路**
 
-1、特殊情形，五张扑克牌都是大小王，这个时候能构成顺子
-
-2、其余情形，需要同时满足以下两个条件才能构成顺子
-
-- 除大小王的数值0外，扑克牌中中不能出现重复数字
-- 除大小王的数值0外，扑克牌的最大数值和最小数值不能差值不能大于4
+先计算在n次投递时，每个面值总和出现的次数，再来计算各个面值出现的概率。
 
 ```Python
 class Solution:
-    def isStraight(self, nums: List[int]) -> bool:
-        List = sorted(nums)      # 对输入数组进行升序排序
-        if List[0] == List[-1]:  # 特殊情形下，五张牌都是大小王
-            return True
+    def twoSum(self, n: int) -> List[float]:
+        # n次扔筛子后，可能出现面值的最大值和最小值
+        s_max = n * 6
+        s_min = n * 1
 
-        data = {}  # 用来记录每个扑克牌出现的次数
+        # timesCount[i][j]:代表第i次扔筛子，总和为j的次数
+        # 注意，初始化时，增加了第0次扔筛子和面值总和为0
+        timesCount = [[0 for i in range(s_max + 1)] for j in range(n + 1)]
 
-        # 其他情形
-        # 除大小王的数值0外，顺子中不能出现重复数字
-        # 除大小王的数值0外，最大数值和最小数值不能差值不能大于4
-
-        maxValue = 0  # 初始化这五张扑克牌的最大值和最小值
-        minValue = 13
-
-        for index in range(len(List)):
-
-            if List[index] <= minValue and List[index] != 0:  # 更新扑克牌的最大值和最小值
-                minValue = List[index]
-            if List[index] >= maxValue and List[index] != 0:
-                maxValue = List[index]
-
-            if List[index] not in data:                      # 用字典存放扑克牌出现的次数
-                data[List[index]] = 1
-            elif List[index] != 0 and List[index] in data:  # 存在非0的重复数字，不可能存在顺子
-                return False
-            elif List[index] == 0 and List[index] in data:  # 出现多张大小王
-                data[List[index]] += 1
-        if maxValue - minValue > 4:                         
-            return False
-        else:
-            return True
+        for time in range(1, len(timesCount)):
+            # 第一次扔筛子，面值在1~6的次数都为1
+            if time == 1:
+                for i in range(1, 7):
+                    timesCount[time][i] = 1
+                continue
+            # 当投掷筛子的次数time>=2时
+            time_max = time * 6  # 本次遍历的最小值和最大值
+            time_min = time * 1
+            for coin in range(time_min, time_max + 1):
+                for i in range(1, 7):  # 单次扔筛子，面值范围为：1~6
+                    if coin - i >= 0:
+                        timesCount[time][coin] += timesCount[time - 1][coin - i]
+        prob = timesCount[-1][s_min:]
+        times_sum = sum(timesCount[-1][s_min:])
+        for i in range(len(prob)):
+            prob[i] = prob[i] / times_sum
+        return prob
 ```
