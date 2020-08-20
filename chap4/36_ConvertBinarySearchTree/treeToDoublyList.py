@@ -1,26 +1,36 @@
 # Definition for a Node.
 class Node:
-    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
-        self.val = int(x)
-        self.next = next
-        self.random = random
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 
 class Solution:
-    def copyRandomList(self, head: 'Node') -> 'Node':
-        if head==None :             #输入节点是空节点,z直接返回空节点
-            return None
+    def treeToDoublyList(self, root: 'Node') -> 'Node':
 
-        #将nodeData= {None:None}进行这样子的初始化，其实就是先将最后的空节点压入
-        #否则在最后的重构链表节点时候，找不到空节点进行连接
-        nodeData= {None:None}      #用字典结构存放节点信息
-        node=head
-        while node :
-            nodeData[node]=Node(node.val)
-            node=node.next
+        # 搜索二叉树的中序遍历就是单调递增序列
+        array = self.inOrder(root)
 
-        node=head                  #连接节点，重构链表
-        while node:
-            nodeData[node].next=nodeData[node.next]
-            nodeData[node].random=nodeData[node.random]
-            node=node.next
-        return nodeData[head]
+        # 断掉节点之间的连接进行重新连接
+        for index in range(len(array) - 1):
+            array[index].right = array[index + 1]
+        for index in range(len(array) - 1, 0, -1):
+            array[index].left = array[index - 1]
+        return array[0]
+
+    # 二叉树的中序遍历序列化
+    def inOrder(self, root):
+        array = []
+        if root == None:
+            return []
+        left = self.inOrder(root.left)
+        if len(left) > 0:
+            for item in left:
+                array.append(item)
+        array.append(root)
+        right = self.inOrder(root.right)
+        if len(right) > 0:
+            for item in right:
+                array.append(item)
+        return array
