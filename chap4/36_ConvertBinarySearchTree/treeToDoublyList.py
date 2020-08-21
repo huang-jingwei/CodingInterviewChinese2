@@ -8,15 +8,19 @@ class Node:
 
 class Solution:
     def treeToDoublyList(self, root: 'Node') -> 'Node':
+        if root == None:
+            return root
 
         # 搜索二叉树的中序遍历就是单调递增序列
         array = self.inOrder(root)
 
         # 断掉节点之间的连接进行重新连接
-        for index in range(len(array) - 1):
+        for index in range(len(array) - 1):         # 重新连接右节点
             array[index].right = array[index + 1]
-        for index in range(len(array) - 1, 0, -1):
+        for index in range(len(array) - 1, 0, -1):  # 重新连接左节点
             array[index].left = array[index - 1]
+        array[-1].right = array[0]                  # 连接头尾两节点
+        array[0].left = array[-1]
         return array[0]
 
     # 二叉树的中序遍历序列化
