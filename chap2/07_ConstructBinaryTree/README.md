@@ -28,36 +28,36 @@ LeetCode:[重建二叉树](https://leetcode-cn.com/problems/zhong-jian-er-cha-sh
 
 
 ```python
-class CQueue:
+# Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
-    def __init__(self, array=[]):
-        self.dataArray = array                   # 数据栈
-        self.helpArray = []                      # 辅助数据栈
-        self.size = len(self.dataArray)          # 记录队列中元素
 
-    def appendTail(self, value: int) -> None:   # 在队列尾部添加元素
-        self.dataArray.append(value)
-        self.size += 1
-        return self.dataArray
+class Solution:
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
+        if len(preorder) == 0:
+            return None
+        head = self.reconstruction(preorder, inorder, 0, 0, len(inorder) - 1)
 
-    def deleteHead(self) -> int:                # 删除队列头部元素
-        if self.size == 0:                      # 队列为空时
-            return -1
-        elif self.size >= 1:                    # 队列有元素时
-            while len(self.dataArray) != 1:
-                self.helpArray.append(self.dataArray.pop())
-            param_2 = self.dataArray.pop()
-            self.size -= 1
+        return head
 
-            self.dataArray = []                # 数据栈更新为空列表，然后再往原数据栈中添加元素
-            while len(self.helpArray) > 0:
-                self.dataArray.append(self.helpArray.pop())
-            self.helpArray = []               # 辅助数据栈重新置为空列表
-            return param_2
-
-# Your CQueue object will be instantiated and called as such:
-# obj = CQueue()
-# obj.appendTail(value)
-# param_2 = obj.deleteHead()     
+    def reconstruction(self, preorder, inorder, headIndex, left, right):
+        if left > right:
+            return None
+        headVal = preorder[headIndex]
+        head = TreeNode(headVal)         # 建立当前子树的根节点
+       
+        # 中序遍历的顺序是：左中右
+        # 找出在中序遍历中，左右子树的分界点
+        mid = left
+        for index in range(len(inorder)):
+            if inorder[index] == headVal:
+                mid = index
+        head.left = self.reconstruction(preorder, inorder, headIndex + 1, left, mid - 1)
+        head.right = self.reconstruction(preorder, inorder, mid - left + headIndex + 1, mid + 1, right)
+        return head  
 ```
 
