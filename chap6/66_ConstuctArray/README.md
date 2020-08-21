@@ -1,54 +1,46 @@
-# 面试题64：求1+2+…+n
+# 面试题66：构建乘积数组
 
-【题目一】 求 1+2+...+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。
+【题目】给定一个数组 A[0,1,…,n-1]，请构建一个数组 B[0,1,…,n-1]，其中 B 中的元素 B[i]=A[0]×A[1]×…×A[i-1]×A[i+1]×…×A[n-1]。不能使用除法。
+
+例子
+
+```python
+输入: [1,2,3,4,5]
+输出: [120,60,40,30,24]
+```
+
+LeetCode:[构建乘积数组](https://leetcode-cn.com/problems/gou-jian-cheng-ji-shu-zu-lcof/)
 
 
-
-LeetCode:[求1+2+…+n](https://leetcode-cn.com/problems/qiu-12n-lcof/)
 
 **思路一：暴力解法**
 
-最简单直接的方法就是将这n个数直接相加。
-
-算法时间复杂度：O(N)
+算法时间复杂度：O(N^2)，但是暴力解法会超出时间限制。
 
 ```Python
-# 函数功能： 求1+2+...+n
-# 基本思路：直接相加
-# 算法时间复杂度：O(N)
-def Accumulate_right1(number):
-    if number== None or number==0:      # 若输入数组为空，直接输出0
-        return 0
-    count = 0                           # 初始化计数器，用来记录总和
-    for i in range(number+1):
-        count=count+i
-    return count
+class Solution:
+    def constructArr(self, a: List[int]) -> List[int]:
+        listLength=len(a)
+   
+        answer=[1]*listLength
+        for index in range(listLength):
+            product=1
+            leftIndex=0
+            while leftIndex<index:
+                product *=a[leftIndex]
+                leftIndex +=1
+            
+            rightIndex=index+1
+            while rightIndex <listLength:
+                product *=a[rightIndex]
+                rightIndex +=1
+            answer[index]=product
+        return answer
 ```
 
 
 
-**思路二：公式**
 
-例如等差数列的求和公式
 
-```python
-# 函数功能： 求1+2+...+n
-# 基本思路：等差数列的求和公式sum=(a1+an)*n/2
-# 算法时间复杂度：O(N)
-def Accumulate_right2(number):
-    if number== None or number==0:       # 若输入数组为空，直接输出0
-        return 0
-    return int((1+number)*number/2)
-```
-
-**思路三：递归**
-
-采用递归来模拟循环
-
-```python
-# 函数功能：递归
-# 算法时间复杂度：O(N)
-def Accumulate(number):
-    return number>=1 and number+Accumulate(number-1)
-```
+**思路二**
 
