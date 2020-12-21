@@ -5,27 +5,27 @@ class TreeNode:
         self.left = None
         self.right = None
 
-
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
-        if len(preorder) == 0:
+
+        # 前序遍历的顺序：中左右
+        # 中序遍历的顺序：左中右
+
+        length = len(preorder)
+        if length == 0:
             return None
-        head = self.reconstruction(preorder, inorder, 0, 0, len(inorder) - 1)
 
-        return head
+        # step1:构建头节点
+        headValue = preorder.pop(0)  # 头节点的数值
+        head = TreeNode(headValue)
 
-    def reconstruction(self, preorder, inorder, headIndex, left, right):
-        if left > right:
-            return None
-        headVal = preorder[headIndex]
-        head = TreeNode(headVal)         # 建立当前子树的根节点
-
-        # 中序遍历的顺序是：左中右
-        # 找出在中序遍历中，左右子树的分界点
-        mid = left
+        # step2：找到头节点在中序遍历数组的下标index
+        # 在inorder数组中，0~index-1：为该头节点的左子树，index+1~末尾：为该头节点的右子树
+        index = -1
         for index in range(len(inorder)):
-            if inorder[index] == headVal:
-                mid = index
-        head.left = self.reconstruction(preorder, inorder, headIndex + 1, left, mid - 1)
-        head.right = self.reconstruction(preorder, inorder, mid - left + headIndex + 1, mid + 1, right)
+            if inorder[index] == headValue:
+                break
+        head.left = self.buildTree(preorder[:index], inorder[:index])
+        head.right = self.buildTree(preorder[index:], inorder[index + 1:])
+
         return head
