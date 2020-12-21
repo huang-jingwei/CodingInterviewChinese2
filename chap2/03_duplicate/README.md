@@ -18,7 +18,16 @@ LeetCode:[数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhon
 
 先把输入的数组间排序。从排序额数组中国找出重复的数值是一件容易的事情，只需要从头到尾扫描排序后的数值即可。
 
-
+```python
+def duplicate_right(array):
+    if array==None or len(array)<=0:    #判断数组是否为空数组
+        return None
+    sortArray=sorted(array)
+    for index in range(len(sortArray)-1):
+        if sortArray[index]==sortArray[index+1]:
+            return sortArray[index]
+    return False
+```
 
 **思路二：哈希表**
 
@@ -43,5 +52,30 @@ def duplicate(array):
             hashMap[array[index]]=1
         else:                           #若字典中已经存在该元素，则直接返回
             return array[index]
+```
+
+**思路三：原地哈希**
+
+第三种方法可看作原地哈希，不过没有用到字典。具体做法就是因为题目中给的元素是 < len（nums）的，所以我们可以让 位置i 的地方放元素i。
+
+可以看做是一种原地哈希，不过没有用到字典。具体做法就是因为题目中给的元素是 < len（nums）的，所以我们可以让 位置i 的地方放元素i。
+
+- 如果位置i的元素不是i的话，那么我们就把i元素的位置放到它应该在的位置，即 nums[i] 和nums[nums[i]]的元素交换，这样就把原来在nums[i]的元素正确归位了。
+- 如果发现 要把 nums[i]正确归位的时候，发现nums[i]（这个nums[i]是下标）那个位置上的元素和要归位的元素已经一样了，说明就重复了，重复了就return
+
+**算法复杂度**：时间复杂度O(n)，空间复杂度O(1)。
+
+```python
+class Solution:
+    def findRepeatNumber(self, nums: List[int]) -> int:
+
+        for i in range(len(nums)):
+
+            while nums[i] !=i:
+                if nums[i]==nums[nums[i]]:
+                    return nums[i]
+                else:
+                    temp = nums[i]
+                    nums[i],nums[temp]=nums[temp],nums[i]   
 ```
 
