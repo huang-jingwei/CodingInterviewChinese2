@@ -23,7 +23,7 @@
 |    5     | [替换空格](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/05_ReplacesSpaces) | [替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/)、[ 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/) |    13    | [机器人的运动范围](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/13_RobotMove) | [机器人的运动范围](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/) |
 |    6     | [从尾到头打印链表](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/06_PrintListReversedOrder) | [从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/) |    14    | [剪绳子](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/14_CuttingRope) | [剪绳子](https://leetcode-cn.com/problems/jian-sheng-zi-lcof/) |
 |    7     | [重建二叉树](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/07_ConstructBinaryTree) | [重建二叉树](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/) |    15    | [二进制中1的个数](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/15_NumberOf1InBinary) | [二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/) |
-|    8     |                       二叉树的下一节点                       |                       二叉树的下一节点                       |          |                                                              |                                                              |
+|    8     | [二叉树的下一节点](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap2/08_NextNodeInBinaryTrees) |  [后继者](https://leetcode-cn.com/problems/successor-lcci/)  |          |                                                              |                                                              |
 
 
 
