@@ -22,12 +22,13 @@ LeetCode:[打印从1到最大的n位数](https://leetcode-cn.com/problems/da-yin
 
 
 ```Python
-def PrintToMaxOfNDigits(n):
-    number = 1                      # 初始化数值number，代表所生成的正整数
-    array = []                      # 初始化一个数组，用来存放所有生成的正整数
-    while number < 10 ** n:
-        array.append(number)
-        number = number + 1
-    return array
+class Solution:
+    def printNumbers(self, n: int) -> List[int]:
+        result=[]
+        value=1
+        while value<10**n:
+            result.append(value)
+            value +=1
+        return result
 ```
 
