@@ -87,9 +87,9 @@
 
 
 
-| 题目序号 |     本人的题解     | LeetCode链接 | 题目序号 |         本人的题解         |                         LeetCode链接                         |
-| :------: | :----------------: | :----------: | :------: | :------------------------: | :----------------------------------------------------------: |
-|    67    | 把字符串转换为整数 |              |    68    | 树中两个节点的最低公共祖先 | [剑指 Offer 68 - I. 二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/)、[剑指 Offer 68 - II. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/) |
+| 题目序号 |     本人的题解     | LeetCode链接 | 题目序号 |                          本人的题解                          |                         LeetCode链接                         |
+| :------: | :----------------: | :----------: | :------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|    67    | 把字符串转换为整数 |              |    68    | [树中两个节点的最低公共祖先](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap7/68_lowestCommonAncestor) | [剑指 Offer 68 - I. 二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/)、[剑指 Offer 68 - II. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/) |
 
 
 
