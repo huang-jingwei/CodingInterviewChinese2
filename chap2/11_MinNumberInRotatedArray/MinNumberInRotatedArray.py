@@ -17,49 +17,26 @@ def MinNumberInRotatedArray_way1(array):
 #思路二 解题思路：二分查找
 #算法复杂度:O(log N)
 
-def MinNumberInRotatedArray_way2(array):
-    if array==None or len(array)==0:    #判断数组是否为空数组
-        return None
-    leftIndex=0                               #初始化搜索区间的左右边界下标
-    rightIndex=len(array)-1
-    midIndex=0                                #初始化搜索区间的中间下标
+class Solution:
+    def minArray(self, numbers: List[int]) -> int:
+        left = 0  # 数组的左右边界
+        right = len(numbers) - 1
 
-    if array[leftIndex]<array[rightIndex]:    #此时数组并未被旋转，第一个元素就是最小元素
-        return array[0]
+        # 旋转后数组可分为：左有序数组(数值相对大)+右有序数组(数值相对小)
+        # 原问题可变为，数组的最小值为右有序数组的第一个元素
 
-    while array[leftIndex]>=array[rightIndex]:
-        if rightIndex-leftIndex==1:           #当两个移动下标索引相邻时，跳出循环
-            midIndex=rightIndex
-            break
-        midIndex=(rightIndex+leftIndex)//2    #更新搜索区间的中间元素的下标
+        # 特别注意，进行二分计算时，要防止左右边界越界
 
-        #如果左右边界、中间点三者数值相等
-        # 此时只能判断最小值在这段搜索区间内，但是无法再进行二分查找了
-        if array[leftIndex]==array[midIndex] and array[midIndex]==array[rightIndex]:
-            return  minSearch(array,leftIndex,rightIndex)
+        while left < right:
+            mid = (left + right) // 2
 
-        # 如果该中间元素位于前面的递增子数组，那么它应该大于或者等于第一个指针指向的元素
-        if array[midIndex]>=array[leftIndex]:
-            leftIndex=midIndex
-
-        #如果中间元素位于后面的递增子数组，那么它应该小于或者等于第二个指针指 向的元素
-        elif array[midIndex]<=array[rightIndex]:
-            rightIndex=midIndex
-    return array[midIndex]
-
-#函数功能：针对思路二中无法再进行二分查找的搜索区间，进行顺序查找
-def minSearch(array,index1,index2):
-    minValue=array[index1]
-    for index in range(index1,index2+1):
-        if array[index]<minValue:
-            minValue=array[index]
-    return minValue
-
-if __name__=="__main__":
-    array=[3,4,5,1,2]
-    print(MinNumberInRotatedArray_way1(array))
-    print(MinNumberInRotatedArray_way2(array))
-
-    array=[1,0,1,1,1]
-    print(MinNumberInRotatedArray_way1(array))
-    print(MinNumberInRotatedArray_way2(array))
+            # 情况1：若numbers[mid]<numbers[right]，则mid必定在右有序数组，right指针左移
+            if numbers[mid] < numbers[right]:
+                right = mid
+            # 情况2：若numbers[mid]>numbers[right]，则mid必定在左有序数组，left指针右移
+            elif numbers[mid] > numbers[right]:
+                left = min(mid + 1, right)
+            # 情况3：若numbers[mid]=numbers[right]，不确定mid在哪个有序数组，right指针左移
+            elif numbers[mid] == numbers[right]:
+                right -= 1
+        return numbers[left]
