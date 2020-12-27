@@ -31,7 +31,11 @@
 
 LeetCode:[矩阵中的路径](https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/)
 
-采用回溯法解决该问题
+采用岛问题+回溯法解决该问题
+
+1、岛问题的具体思路参考第13题；
+
+2、这里的回溯法取消占用的思路要了解。
 
 ```python
 class Solution:
