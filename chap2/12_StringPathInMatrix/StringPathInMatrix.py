@@ -1,65 +1,45 @@
+class Solution:
+    def exist(self, board: List[List[str]], word: str) -> bool:
+        wordArray = list(word)  # 将字符串转化为字符列表
 
+        self.row = len(board)  # 矩阵的行、列
+        self.col = len(board[0])
+        self.board = board  # 将矩阵映射到成全局变量
+        # 记录走过的路径
+        view = [[False for i in range(self.col)] for j in range(self.row)]
 
-#函数功能：找出旋转数组的最小数字
-#思路一 解题思路：遍历数组,找出数组的最小值
-#算法复杂度:O(N)
+        for rowIndex in range(self.row):
+            for colIndex in range(self.col):
+                result = self.infect(view, rowIndex, colIndex, 0, wordArray)
+                if result == True:
+                    return True
+        return False
 
-def MinNumberInRotatedArray_way1(array):
-    if array==None or len(array)==0:   #判断数组是否为空数组
-        return None
-    minValue=array[0]                  #初始化数组的最小值
-    for index in range(1,len(array)):
-        if array[index]<minValue:
-            minValue=array[index]
-    return minValue
+    def infect(self, array, rowIndex, colIndex, index, wordArray):
+        # 字符串数组已经被遍历结束，则视作搜索成功
+        if index >= len(wordArray):
+            return True
+        # 防止下标越界
+        if rowIndex < 0 or rowIndex >= self.row or colIndex < 0 or colIndex >= self.col:
+            return False
+        # 矩阵当前位置未能与字符串对应位置进行匹配
+        elif self.board[rowIndex][colIndex] != wordArray[index]:
+            return False
+        # 矩阵当前下标已被占用
+        elif array[rowIndex][colIndex] == True:
+            return False
 
-#函数功能：找出旋转数组的最小数字
-#思路二 解题思路：二分查找
-#算法复杂度:O(log N)
+        array[rowIndex][colIndex] = True  # 占用该位置
+        index += 1
 
-def MinNumberInRotatedArray_way2(array):
-    if array==None or len(array)==0:    #判断数组是否为空数组
-        return None
-    leftIndex=0                               #初始化搜索区间的左右边界下标
-    rightIndex=len(array)-1
-    midIndex=0                                #初始化搜索区间的中间下标
+        # 沿着四个方向进行搜索，只要有一个方向成功，便视作成功
+        result = self.infect(array, rowIndex + 1, colIndex, index, wordArray) or \
+                 self.infect(array, rowIndex - 1, colIndex, index, wordArray) or \
+                 self.infect(array, rowIndex, colIndex + 1, index, wordArray) or \
+                 self.infect(array, rowIndex, colIndex - 1, index, wordArray)
 
-    if array[leftIndex]<array[rightIndex]:    #此时数组并未被旋转，第一个元素就是最小元素
-        return array[0]
-
-    while array[leftIndex]>=array[rightIndex]:
-        if rightIndex-leftIndex==1:           #当两个移动下标索引相邻时，跳出循环
-            midIndex=rightIndex
-            break
-        midIndex=(rightIndex+leftIndex)//2    #更新搜索区间的中间元素的下标
-
-        #如果左右边界、中间点三者数值相等
-        # 此时只能判断最小值在这段搜索区间内，但是无法再进行二分查找了
-        if array[leftIndex]==array[midIndex] and array[midIndex]==array[rightIndex]:
-            return  minSearch(array,leftIndex,rightIndex)
-
-        # 如果该中间元素位于前面的递增子数组，那么它应该大于或者等于第一个指针指向的元素
-        if array[midIndex]>=array[leftIndex]:
-            leftIndex=midIndex
-
-        #如果中间元素位于后面的递增子数组，那么它应该小于或者等于第二个指针指 向的元素
-        elif array[midIndex]<=array[rightIndex]:
-            rightIndex=midIndex
-    return array[midIndex]
-
-#函数功能：针对思路二中无法再进行二分查找的搜索区间，进行顺序查找
-def minSearch(array,index1,index2):
-    minValue=array[index1]
-    for index in range(index1,index2+1):
-        if array[index]<minValue:
-            minValue=array[index]
-    return minValue
-
-if __name__=="__main__":
-    array=[3,4,5,1,2]
-    print(MinNumberInRotatedArray_way1(array))
-    print(MinNumberInRotatedArray_way2(array))
-
-    array=[1,0,1,1,1]
-    print(MinNumberInRotatedArray_way1(array))
-    print(MinNumberInRotatedArray_way2(array))
+        # 搜索成功便返回，反之取消占用
+        if result == True:
+            return True
+        array[rowIndex][colIndex] = False
+        return False
