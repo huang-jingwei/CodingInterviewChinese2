@@ -54,7 +54,45 @@ def duplicate(array):
             return array[index]
 ```
 
-**思路三：原地哈希**
+
+
+**思路三：遍历数组，对对应位置进行取反**
+
+题目分析：因为数组 nums 里的所有数字都在 0～n-1 的范围
+
+1、遍历nums数组，每个数组元素num[i]都对应一个下标index，对num[index]进行取反操作；
+
+2、在进行取反操作前，若num[index]对应的元素为负数，那么num[index]之前至少已经进行一次取反操作，则index就是重复出现的数字。
+
+
+
+这个算法的时间复杂度是O(N)，空间复杂度O(1)。
+
+
+
+```python
+class Solution:
+    def findRepeatNumber(self, nums: List[int]) -> int:
+        length=len(nums)
+
+        # step1:原数组元素范围为：0～n-1 ，将其调整至1～n
+        for index in range(length):
+            nums[index] +=1
+
+        # step2：遍历数组，获得元素对应的下标index，再将index对应的元素取反
+        # 若index对应的元素为负数，那么index至少已经出现一次
+        for i in range(length):
+            index=abs(nums[i])-1
+
+            if nums[index]<0:
+                return index
+            else:
+                nums[index]=-1*nums[index]
+```
+
+
+
+**思路四：原地哈希**
 
 第三种方法可看作原地哈希，不过没有用到字典。具体做法就是因为题目中给的元素是 < len（nums）的，所以我们可以让 位置i 的地方放元素i。
 
