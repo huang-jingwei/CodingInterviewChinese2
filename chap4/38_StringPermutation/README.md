@@ -36,6 +36,45 @@ LeetCode:[字符串的排列](https://leetcode-cn.com/problems/zi-fu-chuan-de-pa
 
 
 
+**本人的实现方式**
+
+```python
+import copy
+class Solution:
+    def permutation(self, s: str) -> List[str]:
+        string=list(s)        # 将字符串转化为列表
+        length=len(string)    # 字符串长度
+        pb=[False]*length     # 布尔数组，记录当前字符是否已经加入字符串
+       
+        self.result=[]      # 字符串的组合
+        self.data={}        # 去重处理，防止重复添加字符串
+        for index in range(len(string)):
+            self.dfs(pb,string,0,[],length)
+        return self.result
+
+    def dfs(self,pb,string,index,arr,length):
+        if index==length:
+            res=''.join(arr)
+            if res not in self.data:
+                self.result.append(copy.copy(res)) 
+                self.data[copy.copy(res)]=1
+            return
+       
+        for i in range(length):
+            if pb[i] ==False:
+                pb[i]=True
+                arr.append(string[i])
+                self.dfs(pb,string,index+1,arr,length)
+                arr.pop()
+                pb[i]=False
+```
+
+
+
+
+
+**##LeetCode上别人的实现方法##**
+
 **递归解析：**
 **终止条件：**  当 x = len(c) - 1时，代表所有位已固定（最后一位只有 11 种情况），则将当前组合 c 转化为字符串并加入 res，并返回；
 **递推参数：**  当前固定位 x；
