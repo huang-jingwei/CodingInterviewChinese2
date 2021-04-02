@@ -39,9 +39,7 @@ LeetCode:[剑指 Offer 45. 把数组排成最小的数](https://leetcode-cn.com/
 
 最简单直接的方法就是用dfs的方法对所有可能出现的数字进行比较，选出最小的数字。
 
-算法时间复杂度：O(N^2)
-
-这种方法会超出时间限制
+算法时间复杂度：O(N^2)。这种方法会超出时间限制
 
 ```Python
 class Solution:
