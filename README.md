@@ -83,7 +83,7 @@
 
 
 
-# 第7章：两个面试案例
+# [第7章：两个面试案例](https://github.com/gdutthu/CodingInterviewChinese2/tree/master/chap7)
 
 
 
