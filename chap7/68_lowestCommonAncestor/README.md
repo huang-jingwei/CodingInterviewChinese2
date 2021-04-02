@@ -107,9 +107,10 @@ class Solution:
 
 LeetCode:[剑指 Offer 68 - II. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/)
 
+**解题思路：**
+祖先的定义： 若节点 p 在节点 root 的左（右）子树中，或 p = root，则称 root是 p的祖先。
 
-
-**题目分析**
+![](image/example2.1.png)
 
 最近公共祖先的定义： 设节点 root为节点 p, q的某公共祖先，若其左子节点 root.left 和右子节点 root.right 都不是 p,q的公共祖先，则称 root是 “最近的公共祖先” 。
 
@@ -119,7 +120,7 @@ LeetCode:[剑指 Offer 68 - II. 二叉树的最近公共祖先](https://leetcode
 - p = root，且 q 在 root 的左或右子树中；
 - q = root，且 p在 root的左或右子树中；
 
-
+![](image/example2.2.png)
 
 考虑通过递归对二叉树进行后序遍历，当遇到节点 p或 q时返回。从底至顶回溯，当节点 p, q在节点 root的异侧时，节点 root即为最近公共祖先，则向上返回 root。
 
